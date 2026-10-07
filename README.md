@@ -18,7 +18,7 @@ The first implementation uses provisional combat values in `TrainingPlayerContro
 
 The supplied Kenney Minimap Pack and Pixel Adventure UI Pack are in `Assets/Art/Kenney`. Both are CC0; original license files are included. Kenney credits are optional. The HUD uses the pixel UI frames, and the minimap uses pack icons for the player and target.
 
-The player has 4-direction idle and walk frames, plus windup, strike, and recovery poses with a separate greatsword layer. The pixel training dummy and hero source are in `Assets/Art/Characters`; `GenerateTrainingHero.lua` regenerates them with Aseprite when run from the project root. Scene sprites use 32 PPU, point filtering, and the URP Pixel Perfect Camera.
+The player has 4-direction idle and walk frames, plus windup, strike, and recovery poses with a separate greatsword layer. Editable Aseprite sources and the Lua generator are in `Assets/Art/Characters`. Run `ExportTrainingArt.ps1` with your Aseprite executable path to regenerate the source files and frame PNGs. Scene sprites use 32 PPU, point filtering, and the URP Pixel Perfect Camera.
 
 ## Design documents
 
