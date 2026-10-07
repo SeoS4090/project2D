@@ -129,10 +129,11 @@ local function addFrame(direction,walking,pose,duration)
   end
   sprite:newCel(effectLayer,index,effects,Point(0,0))
 end
+local initialFrameAvailable=true
 local function addSequence(name,direction,poses,durations)
-  local first=#sprite.frames+1
+  local first=initialFrameAvailable and 1 or (#sprite.frames+1)
   for i,pose in ipairs(poses) do
-    if #sprite.frames>1 or i>1 then sprite:newFrame() end
+    if initialFrameAvailable then initialFrameAvailable=false else sprite:newFrame() end
     addFrame(direction,pose=="walk" and i%2==0,pose,durations[i])
   end
   local tag=sprite:newTag()

@@ -12,7 +12,7 @@ public static class TrainingGroundSceneBuilder
 {
     private const string ScenePath = "Assets/Scenes/TrainingGround.unity";
     private const string PrototypeSpritePath = "Assets/Art/Runtime/PrototypePixel.png";
-    private const string HeroFramesPath = "Assets/Art/Characters/Frames";
+    private const string HeroFramesPath = "Assets/Art/Characters/Frames/Generated";
     private static Sprite prototypeSprite;
     private static Sprite[] heroBodyFrames;
     private static Sprite[] heroSwordFrames;
@@ -100,6 +100,9 @@ public static class TrainingGroundSceneBuilder
         SetPrivateField(playerView, "bodyFrames", heroBodyFrames);
         SetPrivateField(playerView, "swordFrames", heroSwordFrames);
         SetPrivateField(controller, "playerView", playerView);
+        TrainingHeroAnimationSet upgradedHero = AssetDatabase.LoadAssetAtPath<TrainingHeroAnimationSet>(
+            "Assets/Art/Characters/HeroV2/TrainingHeroV2.asset");
+        if (upgradedHero != null) TrainingHeroV2Installer.Bind(playerView, upgradedHero);
 
         GameObject dummy = new GameObject("Training Dummy");
         dummy.transform.position = new Vector3(1.5f, 1.3f, 0f);

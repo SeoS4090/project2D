@@ -8,7 +8,7 @@ $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 $generator = Join-Path $PSScriptRoot 'GenerateTrainingHero.lua'
 $heroSource = Join-Path $PSScriptRoot 'TrainingHero.aseprite'
 $dummySource = Join-Path $PSScriptRoot 'TrainingDummy.aseprite'
-$frameRoot = Join-Path $PSScriptRoot 'Frames'
+$frameRoot = Join-Path $PSScriptRoot 'Frames\Generated'
 $temporaryRoot = Join-Path $env:TEMP ('training-art-' + [guid]::NewGuid().ToString('N'))
 
 if (!(Test-Path -LiteralPath $AsepriteExe -PathType Leaf)) {
@@ -38,12 +38,13 @@ try {
         throw 'Aseprite did not generate both editable source files.'
     }
 
-    for ($frame = 1; $frame -le 32; $frame++) {
+    for ($frame = 0; $frame -lt 32; $frame++) {
+        $frameFileNumber = $frame + 1
         foreach ($layer in @('Body', 'Greatsword')) {
             $name = if ($layer -eq 'Body') { 'body' } else { 'sword' }
             $folder = if ($layer -eq 'Body') { 'Body' } else { 'Sword' }
-            $temporaryPng = Join-Path $temporaryRoot ("{0}_{1:D2}.png" -f $name, $frame)
-            $destination = Join-Path $frameRoot ("{0}\{1}_{2:D2}.png" -f $folder, $name, $frame)
+            $temporaryPng = Join-Path $temporaryRoot ("{0}_{1:D2}.png" -f $name, $frameFileNumber)
+            $destination = Join-Path $frameRoot ("{0}\{1}_{2:D2}.png" -f $folder, $name, $frameFileNumber)
             Invoke-Aseprite @('--batch', $heroSource, '--frame-range', "$frame,$frame", '--layer', $layer, '--save-as', $temporaryPng)
             if (!(Test-Path -LiteralPath $temporaryPng -PathType Leaf)) {
                 throw "Aseprite failed to export $layer frame $frame."
@@ -57,7 +58,10 @@ try {
     if (!(Test-Path -LiteralPath $temporaryDummy -PathType Leaf)) {
         throw 'Aseprite failed to export the training dummy.'
     }
-    Copy-Item -LiteralPath $temporaryDummy -Destination (Join-Path $PSScriptRoot 'TrainingDummy.png') -Force
+    $dummyTexture = Join-Path $PSScriptRoot 'TrainingDummy.png'
+    if (!(Test-Path -LiteralPath $dummyTexture) -or (Get-FileHash -LiteralPath $temporaryDummy).Hash -ne (Get-FileHash -LiteralPath $dummyTexture).Hash) {
+        Copy-Item -LiteralPath $temporaryDummy -Destination $dummyTexture -Force
+    }
 }
 finally {
     Pop-Location

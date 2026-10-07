@@ -1,0 +1,335 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85f39729b7a72544a0866a3900d46f2, type: 3}
+  m_Name: TrainingHeroV2
+  m_EditorClassIdentifier: Assembly-CSharp::TrainingHeroAnimationSet
+  frames:
+  - body: {fileID: 21300000, guid: bf513e4b99c93a249bc4790cd3c94107, type: 3}
+    sword: {fileID: 21300000, guid: 59c50126ab4f0284f9c4cf4281da0536, type: 3}
+    shadow: {fileID: 21300000, guid: 185764fd8ac74aa488bd0d6ff9e7fd31, type: 3}
+    effects: {fileID: 21300000, guid: 4a89ae76d2a38294484e8ea7c048ae04, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: e96cbd171227c1c438de5355e0ef67ee, type: 3}
+    sword: {fileID: 21300000, guid: 1b6b625df3b2c36498657b1be6fd218e, type: 3}
+    shadow: {fileID: 21300000, guid: 4211349fd9d3a264da0b4c9311d2f317, type: 3}
+    effects: {fileID: 21300000, guid: e6cfa07560f94ac46903886ec2d0821d, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: b677a256570084f48b2d7fce30321823, type: 3}
+    sword: {fileID: 21300000, guid: 698ca3668a194cb44bee6bc9bac45b29, type: 3}
+    shadow: {fileID: 21300000, guid: 6378d59ef9028a64394f56e725e9c3a3, type: 3}
+    effects: {fileID: 21300000, guid: 1400f4cd48741a344bad42bd43771997, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: 992476994c5fb0b4984c54746c70bb86, type: 3}
+    sword: {fileID: 21300000, guid: 907c13e0775db154889bf934be5a1804, type: 3}
+    shadow: {fileID: 21300000, guid: 6199ad0cd311ab840bd888c3b619cd36, type: 3}
+    effects: {fileID: 21300000, guid: 105681827e8df1644b3b265cbe41408a, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: e68cf6f968204ef40b19e0d37f7b3e01, type: 3}
+    sword: {fileID: 21300000, guid: c7ec9bbf301bf1b4aa59cd7dd320fc3c, type: 3}
+    shadow: {fileID: 21300000, guid: c050733e1e880b64e8cb41d0d37e4507, type: 3}
+    effects: {fileID: 21300000, guid: f570ab7a09b1f9d4daa1e1264a5c4173, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 25b4419cf8931b843a7e23b5cb778f8d, type: 3}
+    sword: {fileID: 21300000, guid: 80c3045a8be10414eb46d35297664ee2, type: 3}
+    shadow: {fileID: 21300000, guid: fe664b5242f862a478fa9435b2df258c, type: 3}
+    effects: {fileID: 21300000, guid: 1dfc10297fd955847a597d1e1937d002, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 5f05b47e508e6bb44a67943bdfdb7044, type: 3}
+    sword: {fileID: 21300000, guid: 670b2556377d45b4098eecf6531aeb1a, type: 3}
+    shadow: {fileID: 21300000, guid: 12e4a36e11c11764093d74e0c68f666e, type: 3}
+    effects: {fileID: 21300000, guid: f791259105e204446be6a2ca64c513d5, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 155d63b3b185f8544bbc88228622bb8d, type: 3}
+    sword: {fileID: 21300000, guid: bb531f4f4afdbd645a871b24a462bc6e, type: 3}
+    shadow: {fileID: 21300000, guid: 3823d610af8df224682c35faa020078c, type: 3}
+    effects: {fileID: 21300000, guid: 9b23c293af49c374a8d817a2bd62fa16, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 01b3b9aa2bbc98245bc4cadb3661ff26, type: 3}
+    sword: {fileID: 21300000, guid: b4af5866ead3bd84e82dc2bae9309725, type: 3}
+    shadow: {fileID: 21300000, guid: 247b50d10fa1d3344be3c76f1d00289e, type: 3}
+    effects: {fileID: 21300000, guid: be6853635a59e69469df071889c26964, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 34bc4865fd8db774190f32791694aa14, type: 3}
+    sword: {fileID: 21300000, guid: 9dc9034031e46024590c63ae21f5a447, type: 3}
+    shadow: {fileID: 21300000, guid: 4753e6b6b77e1374a9d0afa6140ed76b, type: 3}
+    effects: {fileID: 21300000, guid: 73be8ab80dca5d54aa6026187bb05c7b, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: a6d5e08811a19e6428b4cb692c220997, type: 3}
+    sword: {fileID: 21300000, guid: 25b37d21a7caa74488d5e03d4a6870ae, type: 3}
+    shadow: {fileID: 21300000, guid: 93af628ce31d7ac44bda71fd9b0de8c1, type: 3}
+    effects: {fileID: 21300000, guid: c2dfcca734f3d534f8724b7c576ff320, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: 1a361a731aeb4e741925453142645bc4, type: 3}
+    sword: {fileID: 21300000, guid: 33f7d2b9b3890f14183781510362d7bd, type: 3}
+    shadow: {fileID: 21300000, guid: 4908f2b88a47ce947b5c88d89b85d4c8, type: 3}
+    effects: {fileID: 21300000, guid: 32921debd4df46b48b075d79a3f4a1c3, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: 5b23b56b43e6a83459d46230947873a0, type: 3}
+    sword: {fileID: 21300000, guid: 107449ac20dddfb4b8f9cbed17a898f1, type: 3}
+    shadow: {fileID: 21300000, guid: 623ec3cd858a4384baec1fba672c33aa, type: 3}
+    effects: {fileID: 21300000, guid: ada09b4a0fd1e364abd446bc66f3660f, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 22bcef1b2c072f14d946c63a5b0a3da4, type: 3}
+    sword: {fileID: 21300000, guid: c921c9a927c24b34c9a19452b0f2eb24, type: 3}
+    shadow: {fileID: 21300000, guid: c3170fae47a33ee419b08de8c65e3477, type: 3}
+    effects: {fileID: 21300000, guid: 397dd21f165fac54382d7720c523ca17, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 77238a70e0b68044bbb99a17032bfc73, type: 3}
+    sword: {fileID: 21300000, guid: 8fad491393e854f45ac36da333fec822, type: 3}
+    shadow: {fileID: 21300000, guid: 928215cd4f16b7a4aa6b0c47e119d345, type: 3}
+    effects: {fileID: 21300000, guid: 307270ca2bc66d64c8474881c5d1b8d6, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 67c2c3d5fbee61a4bb40301002cbb0c8, type: 3}
+    sword: {fileID: 21300000, guid: bee1f73a32039514ab4bd48cf6fb5652, type: 3}
+    shadow: {fileID: 21300000, guid: 1228bfdd228582d44837c55d7d7c3f8c, type: 3}
+    effects: {fileID: 21300000, guid: b399c509d62da884798789cc5a1301ce, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 844abf5c357365f4fab09752f971727e, type: 3}
+    sword: {fileID: 21300000, guid: 5c53794750f43984cb9bb0f4595ce4ca, type: 3}
+    shadow: {fileID: 21300000, guid: 3ecf12bdf6839ea40a447b9ac4344a6a, type: 3}
+    effects: {fileID: 21300000, guid: da3209224a29d23448a798adb5b28eab, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: 08037fe3e3001db4885270eeb999cf3d, type: 3}
+    sword: {fileID: 21300000, guid: 9cbbd2131f8a23b429a1a6505c4ba711, type: 3}
+    shadow: {fileID: 21300000, guid: 2c4e37dc56c7de0479501289c6428666, type: 3}
+    effects: {fileID: 21300000, guid: 157b886cf11e9994a82d4d07f8f59ad3, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: 1ee4dddde3617bd40b02dc074ccf2d3a, type: 3}
+    sword: {fileID: 21300000, guid: 9f32ccf4ff4fffa49b60fae7ae3a3157, type: 3}
+    shadow: {fileID: 21300000, guid: 31109e41e2d855348925ee187f435222, type: 3}
+    effects: {fileID: 21300000, guid: f6ff811dfd8262c46acf50d54e9dba66, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: bf72dd4e8c9c85c41a96a85861a4985d, type: 3}
+    sword: {fileID: 21300000, guid: 942d1855dde5bd3469e16e2cd4a81858, type: 3}
+    shadow: {fileID: 21300000, guid: 396b88c0147b03a4c89cae03607dc61e, type: 3}
+    effects: {fileID: 21300000, guid: de37bcbbaa1cf62478e5629ae3ec7985, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: 8eaacd0d0a3a70149b6e3681c1f93e95, type: 3}
+    sword: {fileID: 21300000, guid: ac7ae346e663b394e8c5b8bb6f3ab6e2, type: 3}
+    shadow: {fileID: 21300000, guid: a8a91031df24fdd40a8d2d35296ae82a, type: 3}
+    effects: {fileID: 21300000, guid: 6ec259a1a63a43e479b318b717b3b75a, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 36c13284ee68ac047814f545a27d49b3, type: 3}
+    sword: {fileID: 21300000, guid: 44beb6b728e0c784faf9edddc1a47f4c, type: 3}
+    shadow: {fileID: 21300000, guid: bc3f9c6d4e663494bbbb9fdb503dae0d, type: 3}
+    effects: {fileID: 21300000, guid: 323e3b843413dd54f98841f2bd0957d7, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: ac348b44ec0ae194987e5a410e641cb3, type: 3}
+    sword: {fileID: 21300000, guid: f49b4077dc58acd40988e62f6d4eb7a2, type: 3}
+    shadow: {fileID: 21300000, guid: bf6aea980587da145a21d23c9683be76, type: 3}
+    effects: {fileID: 21300000, guid: 9793d0a8490b7f9498cb677bbabb94cf, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: cd8774c4f17380c47997964aeeb38fa0, type: 3}
+    sword: {fileID: 21300000, guid: 7ae33801f7cb0b44d8f104c85fb40172, type: 3}
+    shadow: {fileID: 21300000, guid: 61eddbe54bbfd63459ba0e8c6d0dc3c9, type: 3}
+    effects: {fileID: 21300000, guid: 73853eff4f76df248a8c510a9e42ce61, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 905a330798de25e4abb0620b40d7efbf, type: 3}
+    sword: {fileID: 21300000, guid: 10c01b57f9575624c94ec1ecffe5c0df, type: 3}
+    shadow: {fileID: 21300000, guid: 33c298ea52161c7419f4f5b09e36352d, type: 3}
+    effects: {fileID: 21300000, guid: d64806e9e9b758a409d9e740d13990c7, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: b7d8bce5307ff5944b14decf32462a42, type: 3}
+    sword: {fileID: 21300000, guid: e08c231916f67f242b2f34195525a51e, type: 3}
+    shadow: {fileID: 21300000, guid: cd30cdad7c4549d4e97a520b099e09d7, type: 3}
+    effects: {fileID: 21300000, guid: 3f013c5718c2a6c42abadbb23b8e94d1, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 3d1ff85283b2610478c1e7ba5e64271e, type: 3}
+    sword: {fileID: 21300000, guid: b3ef65eb40d8149448d73e2f29ab833b, type: 3}
+    shadow: {fileID: 21300000, guid: c95d42989496d784db44a209baa734b3, type: 3}
+    effects: {fileID: 21300000, guid: 8ed956df5be4950479e3c3b4ec3434d6, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: 624160854ef5faa4d96214cd60cad393, type: 3}
+    sword: {fileID: 21300000, guid: 84705bebd0c51ea44a80825166bdaf1c, type: 3}
+    shadow: {fileID: 21300000, guid: d0f93072b447528439722f46f92b7445, type: 3}
+    effects: {fileID: 21300000, guid: 728ab3aa15783e945924226b47ed1c5f, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: fa09958fcf465da4eb3b9a84cdd71ddf, type: 3}
+    sword: {fileID: 21300000, guid: a8650a2743b36bd4086e9cd4071f6e18, type: 3}
+    shadow: {fileID: 21300000, guid: 870fd92172d47fc46aef19dbdd0f6ec5, type: 3}
+    effects: {fileID: 21300000, guid: 229ac254ad857554089ff796e0589a59, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 8d7820c7e3026e34bbb703a76047df1d, type: 3}
+    sword: {fileID: 21300000, guid: 31fabc111046a3e41849ff5386eac596, type: 3}
+    shadow: {fileID: 21300000, guid: ed62e094e44eabd408355415c90e3773, type: 3}
+    effects: {fileID: 21300000, guid: 530e25f5fbf77fa4ca8edd062c70b9c8, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 3b53458a354a6564c80bc6a3496c0309, type: 3}
+    sword: {fileID: 21300000, guid: 20c42cde7c4991740897dc2154d70ae4, type: 3}
+    shadow: {fileID: 21300000, guid: e618a61c400b3ea4d9bac565695f5ac2, type: 3}
+    effects: {fileID: 21300000, guid: 59f9f1ac889f124458497aea3ff6c917, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: b45f19c232a84a6449879b3457514c7e, type: 3}
+    sword: {fileID: 21300000, guid: aeaec0711e31079499da38e30f4d14f1, type: 3}
+    shadow: {fileID: 21300000, guid: 2a5f1a0ae71e47f41b2ab02fab90f104, type: 3}
+    effects: {fileID: 21300000, guid: 4e4ee760eb78d024983e72657f551be7, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: fbd7479f41c160d44a22e13a1c6cc6f7, type: 3}
+    sword: {fileID: 21300000, guid: b338d16885eaad64b8e45ebfd35dde57, type: 3}
+    shadow: {fileID: 21300000, guid: 9cc8ce7e0a7df994c9477701e65f3530, type: 3}
+    effects: {fileID: 21300000, guid: bc116bf92570e304490b780f314a9f5b, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: 8280af0bda5207d4fa8ddf87a7d58615, type: 3}
+    sword: {fileID: 21300000, guid: 008eb0dbef2a2a9448984e231727cc67, type: 3}
+    shadow: {fileID: 21300000, guid: aadb1ff189909fb4090adc93c7ea65d4, type: 3}
+    effects: {fileID: 21300000, guid: b781da10687631c4b9b56880b7e45bac, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: e4a3a142c347ffe41940045c316dd34a, type: 3}
+    sword: {fileID: 21300000, guid: 875a68890a0cb114396b65e243ddfce2, type: 3}
+    shadow: {fileID: 21300000, guid: 5ba1585f596ff854cad409fa628963f5, type: 3}
+    effects: {fileID: 21300000, guid: 2ecf80b3b1c93664488c9e1cc5586f0f, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: 0c0629785a3db2647a7143313da7d2cb, type: 3}
+    sword: {fileID: 21300000, guid: 35d9b2d76eb13e24996f7d002a9d08d0, type: 3}
+    shadow: {fileID: 21300000, guid: c37b535539572ec4697fb5726021afe5, type: 3}
+    effects: {fileID: 21300000, guid: 576a36a9ff9073c42a93257ad4d10e3f, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: b8cb1c9d22c826442abc34bee26cdc86, type: 3}
+    sword: {fileID: 21300000, guid: d8272b4bacf81954a8839ff8b6643b14, type: 3}
+    shadow: {fileID: 21300000, guid: d87063a06f163ff499f74f858a0b85cc, type: 3}
+    effects: {fileID: 21300000, guid: df9685652b1616247912926cf0ffe69e, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 831676eee216218449f99894616aab80, type: 3}
+    sword: {fileID: 21300000, guid: 172391daa80d3804d8240493daa8aee9, type: 3}
+    shadow: {fileID: 21300000, guid: ae37bf8b65892334dbd6a665b1e742fc, type: 3}
+    effects: {fileID: 21300000, guid: 0910e5d5481377d45b1bae5511d6887b, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 8bf231addd15ed246b9ed09ea8cd9d7a, type: 3}
+    sword: {fileID: 21300000, guid: 3444de8373c95434a94b4b8e6b0d81c1, type: 3}
+    shadow: {fileID: 21300000, guid: 4466d0ce8a90c7e4dbbb68156ddc06b6, type: 3}
+    effects: {fileID: 21300000, guid: 537ddb166eeb12b448202013a8a5aa4a, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 49b9b7f5b2030964a99570de7cf6393c, type: 3}
+    sword: {fileID: 21300000, guid: 7d2364b867f335b4790632065a76327b, type: 3}
+    shadow: {fileID: 21300000, guid: 5b8a8ad7c9ce7b1448ce53d13bb406df, type: 3}
+    effects: {fileID: 21300000, guid: 5a00602f89113964ea5323f31f2f5daf, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 033ca255a42a8114697d7c085a235400, type: 3}
+    sword: {fileID: 21300000, guid: 91320167d34020548ade96f18c1141b0, type: 3}
+    shadow: {fileID: 21300000, guid: 5818f4d619bb820469cf3d52ddb4ab94, type: 3}
+    effects: {fileID: 21300000, guid: 5518de7f11704154190b51beda1f4397, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 92e64e5c19b63e440888dec2e57baa63, type: 3}
+    sword: {fileID: 21300000, guid: 960dc99589cc5f646aaa6b2bee23d7d5, type: 3}
+    shadow: {fileID: 21300000, guid: a23ed666a50cfa34c8413d920304d3d4, type: 3}
+    effects: {fileID: 21300000, guid: 1ab067668e203054ca121bdf4ec2863a, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: a25a3354f41e3a44da8163a8d161f2aa, type: 3}
+    sword: {fileID: 21300000, guid: 578b68391dbe0ed4783810ea99d8ae77, type: 3}
+    shadow: {fileID: 21300000, guid: 8558dec78e114034b981935356956f7d, type: 3}
+    effects: {fileID: 21300000, guid: 678f4aa4810f16c47a288ce6d0065776, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: d09f9536d6936964c9ccecda53a0dd8f, type: 3}
+    sword: {fileID: 21300000, guid: 1b9167666b20550419be656dbde33efc, type: 3}
+    shadow: {fileID: 21300000, guid: 4664c1bbd6c0b844d8698f1e8ec7c600, type: 3}
+    effects: {fileID: 21300000, guid: 72eba0fb2f5af6647adcc00f76c24a11, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: 8d983b6e019b97d4faac153db58fa82d, type: 3}
+    sword: {fileID: 21300000, guid: 6247d93aff0431f48af21cd8db7051df, type: 3}
+    shadow: {fileID: 21300000, guid: 99b0080ffdc21a54090e886496163a9d, type: 3}
+    effects: {fileID: 21300000, guid: 7bb040ff7f9eaf74b8c855581eaa71c6, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 89fbdeeb323df2449aeb186a22cd0e87, type: 3}
+    sword: {fileID: 21300000, guid: fed182bf9cc1d31479897f09e3f90957, type: 3}
+    shadow: {fileID: 21300000, guid: 69a39112b6e18dc46b82ad1364848bd6, type: 3}
+    effects: {fileID: 21300000, guid: 4f4ddec83c98b5c44bd6f4ef54fb1574, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 9db5385ee99642d4d86ab90aaf455164, type: 3}
+    sword: {fileID: 21300000, guid: de4b65583e69be1469f19835bc84e203, type: 3}
+    shadow: {fileID: 21300000, guid: df3fce47741e12346b65ecae0eee382f, type: 3}
+    effects: {fileID: 21300000, guid: 04c9408ff9fcc274fab5a1cb5fb4074b, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 11a04be1cceb6a54a861ea55728c95d4, type: 3}
+    sword: {fileID: 21300000, guid: 498c8a51e1d129446821d8d77d73c894, type: 3}
+    shadow: {fileID: 21300000, guid: 5b8350812c37a6e4f8e5492dc1ebbe4c, type: 3}
+    effects: {fileID: 21300000, guid: 45a09eb29510a7a45bcdc6c165c5a788, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: a78dfd3162771384faf35b0e2add46fe, type: 3}
+    sword: {fileID: 21300000, guid: 396c65586d5225648bb6e2d7999effa0, type: 3}
+    shadow: {fileID: 21300000, guid: 5d542fec42b2aaa4b84f25aee3e0e20a, type: 3}
+    effects: {fileID: 21300000, guid: bca10d2eab33c63458a9e9734eb5d06d, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: 5aa5409ea5d192e44827068bfe9df113, type: 3}
+    sword: {fileID: 21300000, guid: dd46d2c05d7c95d489f9d1bf1b28e5f0, type: 3}
+    shadow: {fileID: 21300000, guid: caf243c1e9ef8704bbaab495ef45fc6c, type: 3}
+    effects: {fileID: 21300000, guid: 42215ba32e61f134ea6bdffdefd38927, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: aa8bd060412c5cc458c843e0dec48418, type: 3}
+    sword: {fileID: 21300000, guid: e6aeded3c3734924c8118a233bd900eb, type: 3}
+    shadow: {fileID: 21300000, guid: 591a192621963cf4e9c1d24385fd5a6d, type: 3}
+    effects: {fileID: 21300000, guid: 13ddce705515b4b4bb4136400504c6c4, type: 3}
+    duration: 0.18
+  - body: {fileID: 21300000, guid: fc961a4bf898ff548a369cd2ecd72e66, type: 3}
+    sword: {fileID: 21300000, guid: e87ae3174ef92fc4db8cb02c14082f00, type: 3}
+    shadow: {fileID: 21300000, guid: 7459723d699076f41be8dc02a32e3366, type: 3}
+    effects: {fileID: 21300000, guid: fdfaf0d6cb98cbd4095ed177bfda2129, type: 3}
+    duration: 0.14
+  - body: {fileID: 21300000, guid: 9e3e1ff389cae8040b5118910e0aadec, type: 3}
+    sword: {fileID: 21300000, guid: 05adb16e0cba34c4b8e19a22456df2aa, type: 3}
+    shadow: {fileID: 21300000, guid: 179547e6d5086d74786c158ba296354a, type: 3}
+    effects: {fileID: 21300000, guid: 72fe5673efd7dc04fb8e691b2b9a58f1, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: fcc9475efb7a5ce4cb62492d4c596076, type: 3}
+    sword: {fileID: 21300000, guid: c4a0548c13055dd459a5dcc1efc4ac70, type: 3}
+    shadow: {fileID: 21300000, guid: b967878b5af626e45a98becfdf73e5d9, type: 3}
+    effects: {fileID: 21300000, guid: 688fee93d4019824081bbc3132d2b8c1, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: bb9ce5f850e10f34e8ba2f9715c4f693, type: 3}
+    sword: {fileID: 21300000, guid: af4870a40ac504c4a952bce6bcc83035, type: 3}
+    shadow: {fileID: 21300000, guid: 4ee8818793af6ea4b95ad6aeaf052070, type: 3}
+    effects: {fileID: 21300000, guid: 4cd9ea13f2058294388ebf22ec5ee69d, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 820cca5987a0e04499ad78519a989e73, type: 3}
+    sword: {fileID: 21300000, guid: 038c3d0120de283438699ad25ebad0cf, type: 3}
+    shadow: {fileID: 21300000, guid: f427295a1bb684043ae42599fc49b71c, type: 3}
+    effects: {fileID: 21300000, guid: 6e25214d0f067c543a3f734d482dcfc0, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 09363837d25a153479ad5e44e0bf9533, type: 3}
+    sword: {fileID: 21300000, guid: 4b54c6b4ad92cd942b7f5a870a6734df, type: 3}
+    shadow: {fileID: 21300000, guid: da45bd659b6b1cf44a842fbd4a226420, type: 3}
+    effects: {fileID: 21300000, guid: d53023256a54940448b748dd44d1c0c3, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: cc11c5dcc7ebc3a4b9c984f34bd13404, type: 3}
+    sword: {fileID: 21300000, guid: 7c4cd3cabaeb90141b37883612b2fc8e, type: 3}
+    shadow: {fileID: 21300000, guid: f510ecdbd26278f45a0332af96f5206b, type: 3}
+    effects: {fileID: 21300000, guid: b3952da8d84ccc3499fb1bd4e99f8842, type: 3}
+    duration: 0.09
+  - body: {fileID: 21300000, guid: 413b167e6a7bd7b47b69aaf7b240eee1, type: 3}
+    sword: {fileID: 21300000, guid: 972506635de8e1a40a830f18410dca9d, type: 3}
+    shadow: {fileID: 21300000, guid: 24d4743c42849c945a18adbccc5b2c3d, type: 3}
+    effects: {fileID: 21300000, guid: 2eb4ff06d6cc75a4f839582df86b23f2, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: 9fa23fa99f70607499a1891027300d0f, type: 3}
+    sword: {fileID: 21300000, guid: 16f3ec6eb540af1499b195ebf5b135e5, type: 3}
+    shadow: {fileID: 21300000, guid: 0adacbb76b0f043479aa8a52ef49c23f, type: 3}
+    effects: {fileID: 21300000, guid: b809f60e934e7be43b87217bf731235f, type: 3}
+    duration: 0.04
+  - body: {fileID: 21300000, guid: c1cc5eb0141097248be2bcad93d58712, type: 3}
+    sword: {fileID: 21300000, guid: e3ce24820828b3849ba6b7b2fc4bbd68, type: 3}
+    shadow: {fileID: 21300000, guid: 5f3a14f519d6f264db66dce3a4b26123, type: 3}
+    effects: {fileID: 21300000, guid: afb0d0853d8125a49a2cd822e9cc02ce, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: ce40376fd9b883b4cabbc995ec3214e6, type: 3}
+    sword: {fileID: 21300000, guid: 157947fe6ae32594aad692d42ba0173e, type: 3}
+    shadow: {fileID: 21300000, guid: 438ae32889331ed42a902961234e81c1, type: 3}
+    effects: {fileID: 21300000, guid: 5bf2a3496105cd94080f44a2781f2bee, type: 3}
+    duration: 0.07
+  - body: {fileID: 21300000, guid: 1678e3d853b2ee049b65eb1d7eb793f3, type: 3}
+    sword: {fileID: 21300000, guid: 265ab1f3df94b4a4a9df0a326c9bc4f9, type: 3}
+    shadow: {fileID: 21300000, guid: 064db24c5fc8cbb40ba827b45159c6cc, type: 3}
+    effects: {fileID: 21300000, guid: 42909b57a0769454fb7db470dd23823b, type: 3}
+    duration: 0.05
+  - body: {fileID: 21300000, guid: 790be5d58c385464293f952c93174778, type: 3}
+    sword: {fileID: 21300000, guid: d74324a4201881d41a5b29d9f83d0901, type: 3}
+    shadow: {fileID: 21300000, guid: e69a554df25177140898c9f9fab82bf5, type: 3}
+    effects: {fileID: 21300000, guid: 875d15b0e081868458c4b8f37d28bd4d, type: 3}
+    duration: 0.09
