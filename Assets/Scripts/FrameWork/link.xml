@@ -1,0 +1,12 @@
+<linker>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="CommmonInstantDTO" preserve="all" />
+    <type fullname="CommmonInstantDTO/CommmonInstantBaseDTO" preserve="all" />
+    <type fullname="ItemDTO" preserve="all" />
+    <type fullname="ItemDTO/ItemBaseDTO" preserve="all" />
+    <type fullname="HeroDTO" preserve="all" />
+    <type fullname="HeroDTO/HeroBaseDTO" preserve="all" />
+    <type fullname="PlayerSaveData" preserve="all" />
+    <type fullname="InventorySaveEntry" preserve="all" />
+  </assembly>
+</linker>

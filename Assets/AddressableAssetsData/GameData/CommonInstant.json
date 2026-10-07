@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "key": "default_save_slot",
+      "value": 3
+    },
+    {
+      "key": "defailt_title",
+      "value": "project_2d"
+    },
+    {
+      "key": "default_title",
+      "value": "project_2d"
+    },
+    {
+      "key": "default_language",
+      "value": "kor"
+    },
+    {
+      "key": "fallback_language",
+      "value": "eng"
+    },
+    {
+      "key": "default_hero",
+      "value": "hero_warrior"
+    },
+    {
+      "key": "starting_gold",
+      "value": 100
+    },
+    {
+      "key": "inventory_capacity",
+      "value": 30
+    },
+    {
+      "key": "max_player_level",
+      "value": 99
+    },
+    {
+      "key": "autosave_interval_seconds",
+      "value": 60
+    },
+    {
+      "key": "master_volume",
+      "value": 1.0
+    },
+    {
+      "key": "music_volume",
+      "value": 0.7
+    },
+    {
+      "key": "sfx_volume",
+      "value": 0.8
+    },
+    {
+      "key": "game_data_version",
+      "value": 1
+    }
+  ]
+}

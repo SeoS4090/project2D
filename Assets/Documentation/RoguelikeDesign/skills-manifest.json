@@ -1,0 +1,74 @@
+{
+  "snapshot_date": "2026-10-07",
+  "scope": "repo",
+  "skills": [
+    {
+      "name": "obsidian-cli",
+      "source": "~/.agents/skills/obsidian-cli",
+      "destination": ".agents/skills/obsidian-cli",
+      "modified": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358"
+        }
+      ]
+    },
+    {
+      "name": "obsidian-markdown",
+      "source": "~/.agents/skills/obsidian-markdown",
+      "destination": ".agents/skills/obsidian-markdown",
+      "modified": false,
+      "files": [
+        {
+          "path": "references/CALLOUTS.md",
+          "sha256": "9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b"
+        },
+        {
+          "path": "references/EMBEDS.md",
+          "sha256": "cd7e3a7d27e9d8315870182f73e8fc8735143a16cefb6902d3f456624e93c3ee"
+        },
+        {
+          "path": "references/PROPERTIES.md",
+          "sha256": "392953b5838c3ab3df135b5a914f100ae7b95e4501b6a2e5c8dc63da3ac7558b"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "7ad72e1f0a9081ed325e76b6402ad5de50a00e63e2341fd403a92f147234a007"
+        }
+      ]
+    },
+    {
+      "name": "roguelike-design-review",
+      "source": "project-authored: session 2026-10-07",
+      "destination": ".agents/skills/roguelike-design-review",
+      "modified": false,
+      "files": [
+        {
+          "path": "references/edge-review.md",
+          "sha256": "5772ffb2bc3652b609c4000f832d64619145b7a9d883c6ef7e4f779812469fc7"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "f6db8f8c8b9c04da9cd1aba90838a8fa54fa73a5641c363340a0342f41776964"
+        }
+      ]
+    },
+    {
+      "name": "obsidian-design-audit",
+      "source": "project-authored: session 2026-10-07",
+      "destination": ".agents/skills/obsidian-design-audit",
+      "modified": false,
+      "files": [
+        {
+          "path": "scripts/audit_vault.py",
+          "sha256": "5896cfb42bd8c102da52205b9a19a3ea8472374b71c9a3364028d670b031011a"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "b5cc552dac240273965ed8ae8445bc15d8d69fef308a7752a0e3f99f12c74186"
+        }
+      ]
+    }
+  ]
+}

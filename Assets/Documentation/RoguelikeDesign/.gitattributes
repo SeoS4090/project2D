@@ -1,0 +1,7 @@
+* text=auto
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.docx -text
+"80 참고자료/**" -text
+.agents/skills/** -text
