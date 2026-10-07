@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameBootstrap : PersistentSingleton<GameBootstrap>
 {
@@ -13,6 +14,8 @@ public class GameBootstrap : PersistentSingleton<GameBootstrap>
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static async void StartFramework()
     {
+        // The developer-only training scene is deliberately isolated from save and account services.
+        if (SceneManager.GetActiveScene().name == "TrainingGround") return;
         try { await GetOrCreate().InitializeAsync(); }
         catch (OperationCanceledException) { }
         catch (Exception exception) { Debug.LogException(exception); }
