@@ -28,6 +28,13 @@ V2 previews and the previous implementation verification record are in [Screensh
 
 The imported design vault is at `Assets/Documentation/RoguelikeDesign`. This implementation follows its Training Ground prototype order; combat tuning, progression, and run systems remain future work.
 
+Current character-art discussions are organized as Obsidian notes in the vault:
+
+- [Character proportions and pixel-art production](Assets/Documentation/RoguelikeDesign/07%20Unity%20기술/캐릭터%20비율과%20픽셀%20아트%20제작.md)
+- [Separate character/weapon generation and prefab attachment](Assets/Documentation/RoguelikeDesign/07%20Unity%20기술/캐릭터와%20무기%20분리%20제작.md)
+
+Detailed research notes remain available below:
+
 - [Pixel-art techniques and image-generation plan](Docs/Art/pixel-art-research-2026-10-07.md)
 - [Action-led character proportions: Sephiria, Isaac and Hades](Docs/Art/action-first-character-proportions-2026-10-08.md)
 
