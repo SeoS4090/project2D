@@ -12,6 +12,10 @@ public sealed class TrainingDummy : MonoBehaviour
 
     public float Health => health;
     public float MaxHealth => maxHealth;
+    public float TotalDamage { get; private set; }
+    public float HighestHit { get; private set; }
+    public int HitCount { get; private set; }
+    public float TrainingSeconds { get; private set; }
     public static event Action<TrainingDummy, float, int> HitResolved;
 
     private void Awake()
@@ -22,6 +26,7 @@ public sealed class TrainingDummy : MonoBehaviour
 
     private void Update()
     {
+        TrainingSeconds += Time.deltaTime;
         if (hitFlashRemaining <= 0f || bodyRenderer == null) return;
         hitFlashRemaining -= Time.deltaTime;
         bodyRenderer.color = hitFlashRemaining > 0f ? Color.white : baseColor;
@@ -30,6 +35,9 @@ public sealed class TrainingDummy : MonoBehaviour
     public void ApplyHit(float damage, Vector2 direction, int sequence)
     {
         if (damage <= 0f) return;
+        TotalDamage += damage;
+        HighestHit = Mathf.Max(HighestHit, damage);
+        HitCount++;
         health = Mathf.Max(0f, health - damage);
         hitFlashRemaining = 0.1f;
         if (bodyRenderer != null) bodyRenderer.color = Color.white;
@@ -41,6 +49,8 @@ public sealed class TrainingDummy : MonoBehaviour
     {
         health = maxHealth;
         hitFlashRemaining = 0f;
+        TotalDamage = HighestHit = TrainingSeconds = 0f;
+        HitCount = 0;
         if (bodyRenderer != null) bodyRenderer.color = baseColor;
     }
 }

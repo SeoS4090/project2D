@@ -1,0 +1,48 @@
+0	idle	upper=89	legs=89	dash=False	ms=80
+1	idle	upper=89	legs=89	dash=False	ms=80
+2	idle	upper=90	legs=90	dash=False	ms=90
+3	idle	upper=90	legs=90	dash=False	ms=85
+4	idle	upper=91	legs=91	dash=False	ms=79
+5	idle	upper=91	legs=91	dash=False	ms=84
+6	idle	upper=84	legs=84	dash=False	ms=80
+7	idle	upper=84	legs=84	dash=False	ms=78
+8	walk	upper=92	legs=260	dash=False	ms=83
+9	walk	upper=93	legs=261	dash=False	ms=78
+10	walk	upper=94	legs=262	dash=False	ms=78
+11	walk	upper=95	legs=263	dash=False	ms=79
+12	walk	upper=96	legs=264	dash=False	ms=79
+13	walk	upper=97	legs=265	dash=False	ms=78
+14	walk	upper=97	legs=265	dash=False	ms=83
+15	walk	upper=98	legs=266	dash=False	ms=82
+16	walk	upper=99	legs=267	dash=False	ms=80
+17	walk	upper=100	legs=268	dash=False	ms=80
+18	attack / prepare	upper=111	legs=269	dash=False	ms=79
+19	attack / prepare	upper=113	legs=270	dash=False	ms=79
+20	attack / active	upper=115	legs=271	dash=False	ms=86
+21	attack / active	upper=116	legs=271	dash=False	ms=79
+22	attack / active	upper=117	legs=274	dash=True	ms=81
+23	attack / recover	upper=119	legs=275	dash=True	ms=78
+24	attack / recover	upper=120	legs=276	dash=True	ms=78
+25	attack / recover	upper=121	legs=277	dash=True	ms=79
+26	walk	upper=96	legs=264	dash=False	ms=77
+27	walk	upper=97	legs=265	dash=False	ms=81
+28	walk	upper=97	legs=265	dash=False	ms=79
+29	walk	upper=98	legs=266	dash=False	ms=80
+30	idle	upper=252	legs=252	dash=False	ms=80
+31	idle	upper=252	legs=252	dash=False	ms=81
+32	attack / prepare	upper=280	legs=280	dash=False	ms=83
+33	attack / active	upper=282	legs=282	dash=False	ms=77
+34	attack / active	upper=283	legs=283	dash=False	ms=81
+35	attack / active	upper=284	legs=284	dash=False	ms=80
+36	attack / active	upper=285	legs=285	dash=False	ms=79
+37	attack / recover	upper=287	legs=287	dash=False	ms=78
+38	attack / recover	upper=288	legs=288	dash=False	ms=80
+39	attack / recover	upper=289	legs=289	dash=False	ms=82
+40	idle	upper=257	legs=257	dash=False	ms=82
+41	idle	upper=257	legs=257	dash=False	ms=82
+42	idle	upper=258	legs=258	dash=False	ms=80
+43	idle	upper=259	legs=259	dash=False	ms=83
+44	idle	upper=259	legs=259	dash=False	ms=79
+45	idle	upper=252	legs=252	dash=False	ms=83
+46	idle	upper=252	legs=252	dash=False	ms=80
+47	idle	upper=253	legs=253	dash=False	ms=85

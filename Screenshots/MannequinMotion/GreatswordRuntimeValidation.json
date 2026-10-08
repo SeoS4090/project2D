@@ -1,0 +1,26 @@
+{
+    "passed": [
+        "432 frames / 24-frame directional spin installed",
+        "Held left button runs slash / reverse / heavy / restart",
+        "Three-hit end gap retained before restart",
+        "Repeated early taps reserve one next strike only",
+        "Expired chain restarts at first strike",
+        "Right request released before charge starts is cancelled",
+        "Right request waits for current strike recovery and reserves mana",
+        "Charge slows regular movement and shows charging pose",
+        "Dash proceeds independently during charge",
+        "Maximum charge holds without auto-release or repeated mana spending",
+        "Release starts spin and commits reserved mana once",
+        "Spin execution direction remains locked after aim change",
+        "Full spin hits cardinal target once: (0.36, -0.50, 0.00)",
+        "Full spin hits cardinal target once: (-0.74, 0.60, 0.00)",
+        "Full spin hits cardinal target once: (-1.84, -0.50, 0.00)",
+        "Full spin hits cardinal target once: (-0.74, -1.60, 0.00)",
+        "Short charge produces proportional release strength",
+        "Normal attack buffered during charge resumes at strike one after spin recovery",
+        "Insufficient mana rejects special without reservation or strike",
+        "Repeated real releases spend mana until insufficient",
+        "Motion review suppresses normal and special combat input"
+    ],
+    "failure": ""
+}

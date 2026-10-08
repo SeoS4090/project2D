@@ -1,0 +1,94 @@
+0	attack / prepare	upper=351	legs=351	dash=False	ms=83	combo=1	charge=0.00
+1	attack / prepare	upper=353	legs=353	dash=False	ms=78	combo=1	charge=0.00
+2	attack / active	upper=355	legs=355	dash=False	ms=82	combo=1	charge=0.00
+3	attack / active	upper=356	legs=356	dash=False	ms=86	combo=1	charge=0.00
+4	attack / active	upper=357	legs=357	dash=False	ms=82	combo=1	charge=0.00
+5	attack / recover	upper=359	legs=359	dash=False	ms=84	combo=1	charge=0.00
+6	attack / recover	upper=360	legs=360	dash=False	ms=81	combo=1	charge=0.00
+7	attack / recover	upper=361	legs=361	dash=False	ms=77	combo=1	charge=0.00
+8	idle	upper=325	legs=325	dash=False	ms=81	combo=1	charge=0.00
+9	idle	upper=326	legs=326	dash=False	ms=80	combo=1	charge=0.00
+10	attack_reverse / prepare	upper=362	legs=362	dash=False	ms=80	combo=2	charge=0.00
+11	attack_reverse / prepare	upper=364	legs=364	dash=False	ms=83	combo=2	charge=0.00
+12	attack_reverse / active	upper=366	legs=366	dash=False	ms=82	combo=2	charge=0.00
+13	attack_reverse / active	upper=368	legs=368	dash=False	ms=83	combo=2	charge=0.00
+14	attack_reverse / active	upper=369	legs=369	dash=False	ms=79	combo=2	charge=0.00
+15	attack_reverse / recover	upper=370	legs=370	dash=False	ms=82	combo=2	charge=0.00
+16	attack_reverse / recover	upper=371	legs=371	dash=False	ms=78	combo=2	charge=0.00
+17	attack_reverse / recover	upper=372	legs=372	dash=False	ms=78	combo=2	charge=0.00
+18	attack_reverse / recover	upper=373	legs=373	dash=False	ms=80	combo=2	charge=0.00
+19	idle	upper=331	legs=331	dash=False	ms=80	combo=2	charge=0.00
+20	idle	upper=331	legs=331	dash=False	ms=83	combo=2	charge=0.00
+21	attack_heavy / prepare	upper=376	legs=376	dash=False	ms=83	combo=3	charge=0.00
+22	attack_heavy / active	upper=378	legs=378	dash=False	ms=79	combo=3	charge=0.00
+23	attack_heavy / active	upper=379	legs=379	dash=False	ms=82	combo=3	charge=0.00
+24	attack_heavy / active	upper=381	legs=381	dash=False	ms=82	combo=3	charge=0.00
+25	attack_heavy / recover	upper=382	legs=382	dash=False	ms=82	combo=3	charge=0.00
+26	attack_heavy / recover	upper=383	legs=383	dash=False	ms=82	combo=3	charge=0.00
+27	attack_heavy / recover	upper=384	legs=384	dash=False	ms=82	combo=3	charge=0.00
+28	attack_heavy / recover	upper=385	legs=385	dash=False	ms=78	combo=3	charge=0.00
+29	idle	upper=328	legs=328	dash=False	ms=79	combo=3	charge=0.00
+30	charge	upper=386	legs=386	dash=False	ms=81	combo=1	charge=0.03
+31	charge	upper=387	legs=387	dash=False	ms=82	combo=1	charge=0.06
+32	charge	upper=387	legs=387	dash=False	ms=83	combo=1	charge=0.09
+33	charge	upper=388	legs=388	dash=False	ms=82	combo=1	charge=0.12
+34	charge	upper=388	legs=388	dash=False	ms=84	combo=1	charge=0.15
+35	charge	upper=389	legs=389	dash=False	ms=80	combo=1	charge=0.17
+36	charge	upper=389	legs=389	dash=False	ms=78	combo=1	charge=0.20
+37	charge	upper=390	legs=390	dash=False	ms=80	combo=1	charge=0.23
+38	charge	upper=390	legs=390	dash=False	ms=80	combo=1	charge=0.26
+39	charge	upper=391	legs=391	dash=False	ms=85	combo=1	charge=0.29
+40	charge	upper=391	legs=391	dash=False	ms=81	combo=1	charge=0.32
+41	charge	upper=392	legs=392	dash=False	ms=83	combo=1	charge=0.35
+42	charge	upper=392	legs=392	dash=False	ms=83	combo=1	charge=0.38
+43	charge	upper=393	legs=393	dash=False	ms=84	combo=1	charge=0.41
+44	charge	upper=393	legs=393	dash=False	ms=80	combo=1	charge=0.44
+45	charge	upper=386	legs=386	dash=False	ms=84	combo=1	charge=0.47
+46	charge	upper=386	legs=332	dash=False	ms=78	combo=1	charge=0.50
+47	charge	upper=387	legs=333	dash=False	ms=83	combo=1	charge=0.52
+48	charge	upper=387	legs=334	dash=False	ms=82	combo=1	charge=0.55
+49	charge	upper=388	legs=335	dash=False	ms=79	combo=1	charge=0.58
+50	charge	upper=388	legs=336	dash=False	ms=80	combo=1	charge=0.61
+51	charge	upper=389	legs=337	dash=False	ms=85	combo=1	charge=0.64
+52	charge	upper=389	legs=338	dash=False	ms=85	combo=1	charge=0.67
+53	charge	upper=390	legs=338	dash=False	ms=84	combo=1	charge=0.70
+54	charge	upper=390	legs=339	dash=False	ms=82	combo=1	charge=0.73
+55	charge	upper=391	legs=340	dash=False	ms=81	combo=1	charge=0.76
+56	charge	upper=391	legs=341	dash=False	ms=85	combo=1	charge=0.79
+57	charge	upper=392	legs=342	dash=False	ms=77	combo=1	charge=0.82
+58	charge	upper=392	legs=346	dash=True	ms=81	combo=1	charge=0.85
+59	charge	upper=393	legs=347	dash=True	ms=79	combo=1	charge=0.87
+60	charge	upper=393	legs=348	dash=True	ms=79	combo=1	charge=0.90
+61	charge	upper=386	legs=349	dash=True	ms=79	combo=1	charge=0.93
+62	charge	upper=386	legs=386	dash=False	ms=82	combo=1	charge=0.96
+63	charge	upper=387	legs=387	dash=False	ms=77	combo=1	charge=0.99
+64	charge	upper=387	legs=387	dash=False	ms=81	combo=1	charge=1.00
+65	charge	upper=387	legs=387	dash=False	ms=83	combo=1	charge=1.00
+66	charge	upper=387	legs=387	dash=False	ms=82	combo=1	charge=1.00
+67	charge	upper=387	legs=387	dash=False	ms=83	combo=1	charge=1.00
+68	charge	upper=387	legs=387	dash=False	ms=83	combo=1	charge=1.00
+69	charge	upper=387	legs=387	dash=False	ms=83	combo=1	charge=1.00
+70	spin / prepare	upper=409	legs=409	dash=False	ms=83	combo=1	charge=1.00
+71	spin / prepare	upper=411	legs=411	dash=False	ms=80	combo=1	charge=1.00
+72	spin / active	upper=412	legs=412	dash=False	ms=80	combo=1	charge=1.00
+73	spin / active	upper=414	legs=414	dash=False	ms=83	combo=1	charge=1.00
+74	spin / active	upper=415	legs=415	dash=False	ms=80	combo=1	charge=1.00
+75	spin / active	upper=416	legs=416	dash=False	ms=80	combo=1	charge=1.00
+76	spin / active	upper=418	legs=418	dash=False	ms=83	combo=1	charge=1.00
+77	spin / active	upper=419	legs=419	dash=False	ms=81	combo=1	charge=1.00
+78	spin / active	upper=420	legs=420	dash=False	ms=84	combo=1	charge=1.00
+79	spin / active	upper=422	legs=422	dash=False	ms=83	combo=1	charge=1.00
+80	spin / active	upper=423	legs=423	dash=False	ms=83	combo=1	charge=1.00
+81	spin / active	upper=425	legs=425	dash=False	ms=77	combo=1	charge=1.00
+82	spin / active	upper=426	legs=426	dash=False	ms=79	combo=1	charge=1.00
+83	spin / active	upper=427	legs=427	dash=False	ms=82	combo=1	charge=1.00
+84	spin / recover	upper=428	legs=428	dash=False	ms=81	combo=1	charge=1.00
+85	spin / recover	upper=429	legs=429	dash=False	ms=82	combo=1	charge=1.00
+86	spin / recover	upper=430	legs=430	dash=False	ms=81	combo=1	charge=1.00
+87	spin / recover	upper=431	legs=431	dash=False	ms=80	combo=1	charge=1.00
+88	spin / recover	upper=431	legs=431	dash=False	ms=84	combo=1	charge=1.00
+89	idle	upper=330	legs=330	dash=False	ms=79	combo=1	charge=1.00
+90	idle	upper=330	legs=330	dash=False	ms=79	combo=1	charge=1.00
+91	idle	upper=331	legs=331	dash=False	ms=81	combo=1	charge=1.00
+92	idle	upper=331	legs=331	dash=False	ms=80	combo=1	charge=1.00
+93	idle	upper=324	legs=324	dash=False	ms=83	combo=1	charge=1.00

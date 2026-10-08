@@ -1,0 +1,22 @@
+{
+    "passed": [
+        "375 continuous ground cells rendered",
+        "76 transparent wall/corner/door cells rendered",
+        "5 authored props/stair cells rendered",
+        "Actual imported PPU is 60; UI postprocessor no longer overrides atlas",
+        "TMX wall corner orientation 0",
+        "TMX wall corner orientation 1",
+        "TMX wall corner orientation 2",
+        "TMX wall corner orientation 3",
+        "Both actual stairs_down variants placed without claiming an up-stair asset",
+        "Prototype floor grid removed",
+        "East Wall blocks actual WASD movement",
+        "West Wall blocks actual WASD movement",
+        "North Wall blocks actual WASD movement",
+        "South Wall blocks actual WASD movement",
+        "Barrel Footprint blocks actual movement",
+        "Stacked Barrels Footprint blocks actual movement",
+        "Chest Footprint blocks actual movement"
+    ],
+    "failure": ""
+}

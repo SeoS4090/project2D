@@ -16,6 +16,13 @@ public sealed class TrainingPlayerView : MonoBehaviour
     [SerializeField] private TrainingHeroAnimationSet animationSet;
     [SerializeField] private SpriteRenderer shadowRenderer;
     [SerializeField] private SpriteRenderer effectsRenderer;
+    [SerializeField] private SpriteRenderer legsRenderer;
+    [SerializeField] private SpriteRenderer handsRenderer;
+    public TrainingHeroAnimationSet AnimationSet => animationSet;
+    public int CurrentFrame { get; private set; }
+    public int CurrentLegFrame { get; private set; }
+    public int CurrentDirection { get; private set; }
+    public string CurrentMotion { get; private set; } = "idle";
 
     private float locomotionElapsed;
     private bool wasMoving;
@@ -30,8 +37,17 @@ public sealed class TrainingPlayerView : MonoBehaviour
     private float recoveryRemaining;
     private bool wasAttacking;
 
-    public void SetState(Vector2 move, Vector2 aim, bool attackPending, bool attackActive, Vector2 attackDirection, int attackSequence, float phaseRemaining, float windupDuration, float activeDuration)
+    public void SetState(Vector2 move, Vector2 aim, bool attackPending, bool attackActive, Vector2 attackDirection, int attackSequence, float phaseRemaining, float windupDuration, float activeDuration,
+        bool dashing = false, Vector2 dashDirection = default, float dashProgress = 0f,
+        string attackClip = "attack", bool recovering = false, float recoveryProgress = 0f, bool charging = false, float chargeElapsed = 0f)
     {
+        if (animationSet != null && animationSet.HasNamedClips)
+        {
+            SetDetailedState(move, aim, attackPending, attackActive, attackDirection, attackSequence,
+                phaseRemaining, windupDuration, activeDuration, dashing, dashDirection, dashProgress,
+                attackClip, recovering, recoveryProgress, charging, chargeElapsed);
+            return;
+        }
         if (animationSet != null)
         {
             SetUpgradedState(move, aim, attackPending, attackActive, attackDirection, attackSequence,
@@ -106,11 +122,113 @@ public sealed class TrainingPlayerView : MonoBehaviour
         previousDirection = -1;
         if (animationSet != null)
         {
+            if (animationSet.HasNamedClips)
+            {
+                PreviewClip("idle", 0, 0f);
+                return;
+            }
             ShowUpgradedFrame(0, 0);
             return;
         }
         SetFrame(bodyRenderer, bodyFrames, IdleFrame(facingDirection));
         SetFrame(swordRenderer, swordFrames, IdleFrame(facingDirection));
+    }
+
+    private void SetDetailedState(Vector2 move, Vector2 aim, bool pending, bool active,
+        Vector2 attackDirection, int sequence, float remaining, float windup, float activeTime,
+        bool dashing, Vector2 dashDirection, float dashProgress,
+        string attackClip, bool recovering, float recoveryProgress, bool charging, float chargeElapsed)
+    {
+        if (aim.sqrMagnitude > 0.001f) lastAim = aim.normalized;
+        facingDirection = DirectionIndex(lastAim);
+        bool moving = move.sqrMagnitude > 0.001f;
+        if (moving != wasMoving) locomotionElapsed = 0f;
+        wasMoving = moving;
+        TrainingHeroAnimationSet.Clip locomotion = animationSet.FindClip(moving ? "walk" : "idle");
+        int upper = animationSet.SampleClip(facingDirection, locomotion, locomotionElapsed);
+        int lowerDirection = moving ? DirectionIndex(move) : facingDirection;
+        int lower = animationSet.SampleClip(lowerDirection, locomotion, locomotionElapsed);
+        CurrentMotion = locomotion.name;
+        if (sequence != observedAttackSequence)
+        {
+            observedAttackSequence = sequence;
+            recoveryRemaining = 0f;
+        }
+        TrainingHeroAnimationSet.Clip attack = animationSet.FindClip(attackClip) ?? animationSet.FindClip("attack");
+        if (charging)
+        {
+            upper = animationSet.SampleClip(facingDirection, animationSet.FindClip("charge"), chargeElapsed);
+            CurrentMotion = "charge";
+            if (!moving && !dashing) lower = upper;
+        }
+        if (pending || active)
+        {
+            wasAttacking = true;
+            // Read execution direction too: a preparation shorter than one frame can skip its visual state.
+            lockedAttackDirection = DirectionIndex(attackDirection);
+            int first = attack.first + (pending ? 0 : attack.windupCount);
+            int count = pending ? attack.windupCount : attack.activeCount;
+            float phaseDuration = pending ? windup : activeTime;
+            float progress = phaseDuration > 0f ? Mathf.Clamp01(1f - remaining / phaseDuration) : 1f;
+            upper = animationSet.Sample(lockedAttackDirection, first, count,
+                progress * animationSet.Duration(lockedAttackDirection, first, count), false);
+            facingDirection = lockedAttackDirection;
+            CurrentMotion = attack.name + (pending ? " / prepare" : " / active");
+            if (!moving && !dashing) lower = upper;
+        }
+        else if (recovering)
+        {
+            int first = attack.first + attack.windupCount + attack.activeCount;
+            int count = attack.count - attack.windupCount - attack.activeCount;
+            lockedAttackDirection = DirectionIndex(attackDirection);
+            float duration = animationSet.Duration(lockedAttackDirection, first, count);
+            upper = animationSet.Sample(lockedAttackDirection, first, count, Mathf.Clamp01(recoveryProgress) * duration, false);
+            facingDirection = lockedAttackDirection;
+            CurrentMotion = attack.name + " / recover";
+            if (!moving && !dashing) lower = upper;
+        }
+        if (dashing)
+        {
+            var dash = animationSet.FindClip("dash");
+            int direction = DirectionIndex(dashDirection);
+            lower = animationSet.Sample(direction, dash.first, dash.count,
+                dashProgress * animationSet.Duration(direction, dash.first, dash.count), false);
+            if (!pending && !active && !recovering && !charging)
+            {
+                upper = lower; facingDirection = direction; CurrentMotion = "dash";
+            }
+        }
+        ShowDetailedFrame(upper, lower, facingDirection);
+        locomotionElapsed += Time.deltaTime;
+    }
+
+    public void PreviewClip(string name, int direction, float elapsed)
+    {
+        if (animationSet == null || !animationSet.HasNamedClips) return;
+        var clip = animationSet.FindClip(name);
+        if (clip == null) return;
+        int index = animationSet.SampleClip(direction, clip, elapsed);
+        CurrentMotion = "preview / " + name;
+        ShowDetailedFrame(index, index, direction);
+    }
+
+    private void ShowDetailedFrame(int upperIndex, int lowerIndex, int direction)
+    {
+        var upper = animationSet.frames[upperIndex];
+        CurrentFrame = upperIndex; CurrentLegFrame = lowerIndex; CurrentDirection = direction;
+        if (bodyRenderer != null) bodyRenderer.sprite = upper.body;
+        if (swordRenderer != null) swordRenderer.sprite = upper.sword;
+        if (handsRenderer != null) handsRenderer.sprite = upper.hands;
+        if (legsRenderer != null) legsRenderer.sprite = animationSet.frames[lowerIndex].legs;
+        if (shadowRenderer != null) shadowRenderer.sprite = upper.shadow;
+        if (effectsRenderer != null) effectsRenderer.sprite = upper.effects;
+        if (bodyRenderer == null) return;
+        int order = bodyRenderer.sortingOrder;
+        if (shadowRenderer != null) shadowRenderer.sortingOrder = order - 4;
+        if (legsRenderer != null) legsRenderer.sortingOrder = order - 2;
+        if (swordRenderer != null) swordRenderer.sortingOrder = order + (upper.weaponBehind ? -1 : 1);
+        if (handsRenderer != null) handsRenderer.sortingOrder = order + 2;
+        if (effectsRenderer != null) effectsRenderer.sortingOrder = order + 3;
     }
 
     private void SetUpgradedState(Vector2 move, Vector2 aim, bool pending, bool active,
@@ -161,6 +279,8 @@ public sealed class TrainingPlayerView : MonoBehaviour
 
     private void ShowUpgradedFrame(int index, int direction)
     {
+        if (legsRenderer != null) legsRenderer.sprite = null;
+        if (handsRenderer != null) handsRenderer.sprite = null;
         TrainingHeroAnimationSet.Frame frame = animationSet.frames[index];
         if (bodyRenderer != null) bodyRenderer.sprite = frame.body;
         if (swordRenderer != null) swordRenderer.sprite = frame.sword;

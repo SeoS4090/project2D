@@ -1,0 +1,23 @@
+{
+    "scene": "Assets/Scenes/TrainingGround.unity",
+    "frames": 432,
+    "clips": 10,
+    "passed": [
+        "432 frames / 10 clips",
+        "2160 part sprite references / common pivot / 32 PPU",
+        "Idle input direction 0",
+        "Idle input direction 1",
+        "Idle input direction 2",
+        "Idle input direction 3",
+        "Left strafe with right aim: independent upper/lower directions",
+        "First click uses current aim",
+        "Preparation follows changed aim",
+        "Attack enters active visual phase",
+        "Active strike retains execution direction after aim change",
+        "Simultaneous attack up / dash right preserves both motions",
+        "Real attack hits dummy once for unchanged 25 damage",
+        "All 40 directional previews / pause-step / no preview damage",
+        "Live controller restored after review"
+    ],
+    "failure": ""
+}

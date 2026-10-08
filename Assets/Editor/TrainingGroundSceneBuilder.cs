@@ -102,7 +102,9 @@ public static class TrainingGroundSceneBuilder
         SetPrivateField(controller, "playerView", playerView);
         TrainingHeroAnimationSet upgradedHero = AssetDatabase.LoadAssetAtPath<TrainingHeroAnimationSet>(
             "Assets/Art/Characters/HeroV2/TrainingHeroV2.asset");
-        if (upgradedHero != null) TrainingHeroV2Installer.Bind(playerView, upgradedHero);
+        TrainingHeroAnimationSet mannequin = AssetDatabase.LoadAssetAtPath<TrainingHeroAnimationSet>(TrainingMannequinInstaller.SetPath);
+        if (mannequin != null) TrainingMannequinInstaller.Bind(playerView, mannequin);
+        else if (upgradedHero != null) TrainingHeroV2Installer.Bind(playerView, upgradedHero);
 
         GameObject dummy = new GameObject("Training Dummy");
         dummy.transform.position = new Vector3(1.5f, 1.3f, 0f);
@@ -119,13 +121,12 @@ public static class TrainingGroundSceneBuilder
         TrainingGroundSession session = new GameObject("Training Ground Session").AddComponent<TrainingGroundSession>();
         TrainingGroundHud hud = new GameObject("Training Ground HUD").AddComponent<TrainingGroundHud>();
         hud.Bind(controller, trainingDummy);
-        SetPrivateField(hud, "playerMapIcon", LoadKenneySprite("Assets/Art/Kenney/PixelAdventureUI/Tiles/Small tiles/Thick outline/tile_0001.png", 16f, Vector4.zero));
-        SetPrivateField(hud, "dummyMapIcon", LoadKenneySprite("Assets/Art/Kenney/PixelAdventureUI/Tiles/Small tiles/Thick outline/tile_0014.png", 16f, Vector4.zero));
-        SetPrivateField(hud, "panelSprite", LoadKenneySprite("Assets/Art/Kenney/PixelAdventureUI/Tiles/Large tiles/Thick outline/tile_0009.png", 32f, new Vector4(8f, 8f, 8f, 8f)));
+        TrainingUiInstaller.ApplyToScene(SceneManager.GetActiveScene());
         camera.GetComponent<TrainingCameraFollow>().SetTarget(player.transform);
 
         CreateRoomLabel("START", new Vector2(-7.7f, -4.7f), new Color(0.29f, 0.68f, 0.62f));
         CreateRoomLabel("TARGET", new Vector2(0.5f, 2.6f), new Color(0.94f, 0.66f, 0.36f));
+        TrainingDungeonInstaller.ApplyToScene(SceneManager.GetActiveScene());
         Selection.activeGameObject = session.gameObject;
     }
 
