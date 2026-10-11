@@ -11,13 +11,13 @@ Open `Assets/Scenes/TrainingGround.unity` and press Play. The Training Ground is
 - Left mouse button (hold or repeated presses): three-hit greatsword combo
 - Right mouse button: hold to charge, release for a 360-degree greatsword spin
 - `Space`: dash (charges recharge one at a time)
-- `R`: reset the player, dummy, and damage log
+- Leave the dummy practice radius (default 5 world units) to clear damage statistics; player position and resources are retained.
 
 The first implementation uses provisional combat values in `TrainingPlayerController`; move them into authored game data when the design tables are ready. Training Ground sessions do not initialize the account/save framework.
 
 ## Assets
 
-The supplied Kenney Minimap Pack and Pixel Adventure UI Pack are in `Assets/Art/Kenney`. Both are CC0; original license files are included. Kenney credits are optional. The training HUD uses Pixel Adventure frames and badge markers. Its editable screen prefab is `Assets/UI/Training/TrainingHud.prefab`; dummy-owned world statistics use `TrainingDummyStatistics.prefab` beside it. Recent combat records, the lower-left motion status, bottom-center key guide and HUD buttons have been removed. Reset and motion review remain available on the keyboard. See the design vault note `07 Unity 기술/PixelAdventureUI 이미지 용도와 HUD 적용.md` and the current validation captures under `Screenshots/PixelAdventureUI/CleanHud*`.
+The supplied Kenney Minimap Pack and Pixel Adventure UI Pack are in `Assets/Art/Kenney`. Both are CC0; original license files are included. Kenney credits are optional. The training HUD uses Pixel Adventure frames and badge markers. Its editable screen prefab is `Assets/UI/Training/TrainingHud.prefab`; dummy-owned world statistics use `TrainingDummyStatistics.prefab` beside it. Recent combat records, the lower-left motion status, bottom-center key guide and HUD buttons have been removed. Statistics reset when leaving the practice area; motion review remains available on the keyboard. See the design vault note `07 Unity 기술/PixelAdventureUI 이미지 용도와 HUD 적용.md` and the current validation captures under `Screenshots/PixelAdventureUI/CleanHud*`.
 
 TrainingGround reads the editable `Assets/Art/Runtime/TrainingDungeon/TrainingDungeon.tmx`, referencing the supplied CC0 Scribble Dungeons atlas. Its 64px images use 60px grid spacing (60 PPU / one world unit per cell) as in the original sample. Ground, transparent walls and objects render separately; Tiled H/V/diagonal flags set all four corners without rotating the floor pattern. The TMX also defines explicit wall/prop collision rectangles. The camera, mannequin and combat logic are retained. `Game > Training Ground > Apply Scribble Dungeon` applies saved TMX edits to the open scene; rebuilds also read it. Stair images currently show two down-stair variants; room transitions are future work. See the vault's `07 Unity 기술/Scribble Dungeons 타일 용도와 Tiled 적용.md` for all 154 atlas entries and actual verification under `Screenshots/TrainingDungeon`. The original Kenney sample remains unchanged.
 

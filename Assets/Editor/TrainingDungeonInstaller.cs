@@ -45,12 +45,23 @@ public static class TrainingDungeonInstaller
         var tiles = LoadTiles(map); // Validate all input before replacing the environment.
         Undo.IncrementCurrentGroup(); int group = Undo.GetCurrentGroup(); Undo.SetCurrentGroupName("Apply Tiled dungeon");
         foreach (var root in scene.GetRootGameObjects())
-            if (root.name == EnvironmentName || root.name == "Training Floor" || root.name == "Pixel Training Floor"
+            if (root.name == EnvironmentName || root.name == "Stone and Timber Hall" || root.name == "Training Floor" || root.name == "Pixel Training Floor"
                 || root.name.StartsWith("Floor Grid ") || new[] { "North Wall", "South Wall", "West Wall", "East Wall" }.Contains(root.name))
                 Undo.DestroyObjectImmediate(root);
         var environment = new GameObject(EnvironmentName, typeof(Grid));
         Undo.RegisterCreatedObjectUndo(environment, "Create dungeon"); SceneManager.MoveGameObjectToScene(environment, scene);
         Populate(map, tiles, environment.transform, true);
+        // Spawn points are authored in Tiled too; rebuilding keeps gameplay placement in sync.
+        foreach(var point in map.Elements("objectgroup").Where(g=>(string)g.Attribute("name")=="Spawns").Elements("object"))
+        {
+            Transform target = (string)point.Attribute("name") == "Player"
+                ? UnityEngine.Object.FindFirstObjectByType<TrainingPlayerController>()?.transform
+                : (string)point.Attribute("name") == "Dummy" ? UnityEngine.Object.FindFirstObjectByType<TrainingDummy>()?.transform : null;
+            if(target==null || target.gameObject.scene!=scene)continue;
+            Undo.RecordObject(target,"Tiled spawn placement");
+            target.position=environment.transform.position+new Vector3(Number(point,"x")/60f,
+                Number(map,"height")*Number(map,"tileheight")/60f-Number(point,"y")/60f,0f);
+        }
         foreach (var root in scene.GetRootGameObjects().Where(x => x.name == "START Marker" || x.name == "TARGET Marker"))
         {
             var text = root.GetComponent<TextMesh>(); if (text == null) continue;

@@ -1,0 +1,29 @@
+{
+    "passed": [
+        "Idle shares Transform-only canonical clip",
+        "Walk shares Transform-only canonical clip",
+        "Slash shares Transform-only canonical clip",
+        "Reverse shares Transform-only canonical clip",
+        "Heavy shares Transform-only canonical clip",
+        "Charge shares Transform-only canonical clip",
+        "Spin shares Transform-only canonical clip",
+        "All angles, seven motions, two appearances: both grips within 0.01 source px",
+        "Authored paths fit fixed-length arms without reach clamping",
+        "No weapon-path discontinuity across cardinal sprite boundaries or 360 wrap",
+        "Dash and lower-body direction do not change upper aim pose",
+        "Continuous aim within a view sector does not reassign Sprites",
+        "Spin changes weapon occlusion with its orbit while body facing stays fixed",
+        "Idle pose shared across appearances",
+        "Walk pose shared across appearances",
+        "Slash pose shared across appearances",
+        "Reverse pose shared across appearances",
+        "Heavy pose shared across appearances",
+        "Charge pose shared across appearances",
+        "Spin pose shared across appearances"
+    ],
+    "samples": 103320,
+    "maximumGripErrorPixels": 0.000008529922524758149,
+    "maximumReachCorrectionPixels": 0.0,
+    "maximumBoundaryJumpPixels": 0.0003815460077021271,
+    "failure": ""
+}

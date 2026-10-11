@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>Local art review; previews unsupported motions without creating combat or save events.</summary>
+/// <summary>Local art review; previews shared rig motions without creating combat or save events.</summary>
 public sealed class TrainingMotionReview : MonoBehaviour
 {
     [SerializeField] private TrainingPlayerView view;
@@ -21,13 +21,13 @@ public sealed class TrainingMotionReview : MonoBehaviour
 
     private void Update()
     {
-        if (view == null || view.AnimationSet == null || !view.AnimationSet.HasNamedClips) return;
+        if (view == null || view.CommonRig == null) return;
         var keyboard = Keyboard.current;
         if (keyboard != null && keyboard.f6Key.wasPressedThisFrame) SetReview(!Reviewing);
         if (!Reviewing) return;
         if (keyboard != null)
         {
-            if (keyboard.f7Key.wasPressedThisFrame) Select((ClipIndex + 1) % view.AnimationSet.clips.Length, Direction);
+            if (keyboard.f7Key.wasPressedThisFrame) Select((ClipIndex + 1) % TrainingPlayerView.ReviewClips.Length, Direction);
             if (keyboard.f8Key.wasPressedThisFrame) Select(ClipIndex, (Direction + 1) % 4);
             if (keyboard.f9Key.wasPressedThisFrame) Paused = !Paused;
             if (keyboard.f10Key.wasPressedThisFrame) Speed = Speed == 1f ? 0.25f : Speed == 0.25f ? 0.1f : 1f;
@@ -36,20 +36,19 @@ public sealed class TrainingMotionReview : MonoBehaviour
         if (!Paused)
         {
             elapsed += Time.unscaledDeltaTime * Speed;
-            var clip = view.AnimationSet.clips[ClipIndex];
-            float duration = view.AnimationSet.Duration(Direction, clip.first, clip.count);
-            elapsed = Mathf.Repeat(elapsed, duration);
+            var clip = view.ReviewClip(TrainingPlayerView.ReviewClips[ClipIndex], Direction);
+            if (clip != null) elapsed = Mathf.Repeat(elapsed, Mathf.Max(.0001f, clip.length));
         }
     }
 
     private void LateUpdate()
     {
-        if (Reviewing) view.PreviewClip(view.AnimationSet.clips[ClipIndex].name, Direction, elapsed);
+        if (Reviewing && view != null) view.PreviewClip(TrainingPlayerView.ReviewClips[ClipIndex], Direction, elapsed);
     }
 
     public void SetReview(bool enabled)
     {
-        if (Reviewing == enabled || view == null) return;
+        if (Reviewing == enabled || view == null || player == null || (enabled && view.CommonRig == null)) return;
         Reviewing = enabled; elapsed = 0f;
         if (enabled)
         {
@@ -63,19 +62,17 @@ public sealed class TrainingMotionReview : MonoBehaviour
 
     public void Select(int clip, int direction)
     {
-        ClipIndex = Mathf.Clamp(clip, 0, view.AnimationSet.clips.Length - 1);
+        ClipIndex = Mathf.Clamp(clip, 0, TrainingPlayerView.ReviewClips.Length - 1);
         Direction = Mathf.Clamp(direction, 0, 3); elapsed = 0f;
     }
 
     public void Step()
     {
         Paused = true;
-        var clip = view.AnimationSet.clips[ClipIndex];
-        int current = view.AnimationSet.SampleClip(Direction, clip, elapsed) - Direction * view.AnimationSet.framesPerDirection;
-        int next = (current - clip.first + 1) % clip.count;
-        elapsed = 0f;
-        for (int i = 0; i < next; i++) elapsed += view.AnimationSet.frames[Direction * view.AnimationSet.framesPerDirection + clip.first + i].duration;
-        elapsed += 0.00001f;
+        var clip = view != null ? view.ReviewClip(TrainingPlayerView.ReviewClips[ClipIndex], Direction) : null;
+        if (clip == null) return;
+        float step = 1f / Mathf.Max(1f, clip.frameRate);
+        elapsed = elapsed + step > clip.length + .00001f ? 0f : Mathf.Min(elapsed + step, clip.length);
     }
 
     private void OnDisable()

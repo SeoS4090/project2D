@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Art/ValidateCharacterCleanup.cs"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 989,
+      "executeMs": 3881,
+      "assemblyName": "PipelineRunScript_ValidateCharacterCleanup_e1b9a5ac68a84e1dbdf14255503bab95",
+      "success": true,
+      "result": "{\n    \"passed\": [\n        \"Editor validation runs outside Play\",\n        \"Training player retains a bound common rig\",\n        \"Scene directly instances the production character prefab\",\n        \"All player renderers belong to the shared rig\",\n        \"Shared motion references survive folder migration\",\n        \"All forty shared transform clips retained\",\n        \"No retired character dependency: Assets/Scenes/TrainingGround.unity\",\n        \"No missing scene scripts: Assets/Scenes/TrainingGround.unity\",\n        \"No retired character dependency: Assets/Art/Characters/AzureVanguard/AzureVanguard.prefab\",\n        \"No missing prefab scripts: Assets/Art/Characters/AzureVanguard/AzureVanguard.prefab\",\n        \"No retired character dependency: Assets/UI/Training/TrainingDummyStatistics.prefab\",\n        \"No missing prefab scripts: Assets/UI/Training/TrainingDummyStatistics.prefab\",\n        \"No retired character dependency: Assets/Scenes/Login.unity\",\n        \"No missing scene scripts: Assets/Scenes/Login.unity\",\n        \"No retired character dependency: Assets/UI/Training/TrainingHud.prefab\",\n        \"No missing prefab scripts: Assets/UI/Training/TrainingHud.prefab\",\n        \"No retired character dependency: Assets/UI/Settings/SettingsPopup.prefab\",\n        \"No missing prefab scripts: Assets/UI/Settings/SettingsPopup.prefab\",\n        \"Review uses actual rig clip: idle/0\",\n        \"Review midpoint: idle/0\",\n        \"Review uses actual rig clip: idle/1\",\n        \"Review midpoint: idle/1\",\n        \"Review uses actual rig clip: idle/2\",\n        \"Review midpoint: idle/2\",\n        \"Review uses actual rig clip: idle/3\",\n        \"Review midpoint: idle/3\",\n        \"Review uses actual rig clip: walk/0\",\n        \"Review midpoint: walk/0\",\n        \"Review uses actual rig clip: walk/1\",\n        \"Review midpoint: walk/1\",\n        \"Review uses actual rig clip: walk/2\",\n        \"Review midpoint: walk/2\",\n        \"Review uses actual rig clip: walk/3\",\n        \"Review midpoint: walk/3\",\n        \"Review uses actual rig clip: attack/0\",\n        \"Review midpoint: attack/0\",\n        \"Review uses actual rig clip: attack/1\",\n        \"Review midpoint: attack/1\",\n        \"Review uses actual rig clip: attack/2\",\n        \"Review midpoint: attack/2\",\n        \"Review uses actual rig clip: attack/3\",\n        \"Review midpoint: attack/3\",\n        \"Review uses actual rig clip: attack_reverse/0\",\n        \"Review midpoint: attack_reverse/0\",\n        \"Review uses actual rig clip: attack_reverse/1\",\n        \"Review midpoint: attack_reverse/1\",\n        \"Review uses actual rig clip: attack_reverse/2\",\n        \"Review midpoint: attack_reverse/2\",\n        \"Review uses actual rig clip: attack_reverse/3\",\n        \"Review midpoint: attack_reverse/3\",\n        \"Review uses actual rig clip: attack_heavy/0\",\n        \"Review midpoint: attack_heavy/0\",\n        \"Review uses actual rig clip: attack_heavy/1\",\n        \"Review midpoint: attack_heavy/1\",\n        \"Review uses actual rig clip: attack_heavy/2\",\n        \"Review midpoint: attack_heavy/2\",\n        \"Review uses actual rig clip: attack_heavy/3\",\n        \"Review midpoint: attack_heavy/3\",\n        \"Review uses actual rig clip: charge/0\",\n        \"Review midpoint: charge/0\",\n        \"Review uses actual rig clip: charge/1\",\n        \"Review midpoint: charge/1\",\n        \"Review uses actual rig clip: charge/2\",\n        \"Review midpoint: charge/2\",\n        \"Review uses actual rig clip: charge/3\",\n        \"Review midpoint: charge/3\",\n        \"Review uses actual rig clip: spin/0\",\n        \"Review midpoint: spin/0\",\n        \"Review uses actual rig clip: spin/1\",\n        \"Review midpoint: spin/1\",\n        \"Review uses actual rig clip: spin/2\",\n        \"Review midpoint: spin/2\",\n        \"Review uses actual rig clip: spin/3\",\n        \"Review midpoint: spin/3\",\n        \"Review uses actual rig clip: dash/0\",\n        \"Review midpoint: dash/0\",\n        \"Review uses actual rig clip: dash/1\",\n        \"Review midpoint: dash/1\",\n        \"Review uses actual rig clip: dash/2\",\n        \"Review midpoint: dash/2\",\n        \"Review uses actual rig clip: dash/3\",\n        \"Review midpoint: dash/3\",\n        \"Unimplemented motions cannot fall back to retired sheets\",\n        \"Production atlas regeneration succeeds without retired sources\"\n    ],\n    \"failure\": \"\"\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7801,
+      "projectPath": "D:\\Game Programming\\project2D"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

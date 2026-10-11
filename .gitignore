@@ -25,3 +25,11 @@
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local Obsidian workspace, plugin settings and recoverable trash
+.obsidian/
+.trash/
+
+# Python tooling cache
+__pycache__/
+*.pyc

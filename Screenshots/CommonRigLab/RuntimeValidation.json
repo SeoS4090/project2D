@@ -1,0 +1,15 @@
+{
+    "passed": [
+        "Actual Play Update samples the shared rig",
+        "Two runtime actors share the same clips",
+        "Keyboard selects walk with matching aim/movement",
+        "Keyboard independently changes slash aim and movement",
+        "Runtime grips stay connected: blue-tunic",
+        "Runtime grips stay connected: bronze-armor",
+        "Held Shift combines lower dash with upper slash",
+        "Pause holds the authored animation pose",
+        "Resume and idle selection work",
+        "URP pixel-perfect lab camera uses 32 PPU"
+    ],
+    "failure": ""
+}

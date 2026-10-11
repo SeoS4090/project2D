@@ -1,0 +1,14 @@
+{
+    "passed": [
+        "Active begins at authored windup boundary",
+        "Active ends at recovery boundary and retains non-cardinal execution aim",
+        "Active-to-recovery pose is continuous",
+        "Zero duration active phase reaches endpoint safely",
+        "Zero mouse vector retains previous valid aim",
+        "Re-enabled rig rebuilds graph and supports charge plus dash",
+        "Appearance swap preserves shared reverse motion in adapter",
+        "Comparison UI imports continuous angle control and seven motions",
+        "Comparison controls execute a continuous spin preview"
+    ],
+    "failure": ""
+}

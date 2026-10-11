@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Art/ValidateAzureVanguard.cs",
+      "timeout_ms": "120000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 119,
+      "executeMs": 1764,
+      "assemblyName": "PipelineRunScript_ValidateAzureVanguard_aa9c62ced47d443aad53e6672db74cbf",
+      "success": true,
+      "result": "{\n    \"passed\": [\n        \"Appearance can be assigned before first animation sample after instantiation\",\n        \"Complete new appearance with all 32 directional part references\",\n        \"Existing motion asset reused without per-character clip copies\",\n        \"Registered exactly 32 sprites\",\n        \"4x texture density retains original rig world dimensions\",\n        \"New character preserves both grip connections across seven motions and all sampled aim angles\",\n        \"No missing rendered body parts\",\n        \"Every rendered part uses the new registered sheet\",\n        \"Saved TrainingGround uses the new character\",\n        \"Actual assembled character sheet and motion frames rendered\"\n    ],\n    \"samples\": 15624,\n    \"maximumGripErrorPixels\": 0.00000764428114052862,\n    \"failure\": \"\"\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7801,
+      "projectPath": "D:\\Game Programming\\project2D"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

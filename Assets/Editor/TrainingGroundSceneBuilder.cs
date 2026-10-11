@@ -12,10 +12,7 @@ public static class TrainingGroundSceneBuilder
 {
     private const string ScenePath = "Assets/Scenes/TrainingGround.unity";
     private const string PrototypeSpritePath = "Assets/Art/Runtime/PrototypePixel.png";
-    private const string HeroFramesPath = "Assets/Art/Characters/Frames/Generated";
     private static Sprite prototypeSprite;
-    private static Sprite[] heroBodyFrames;
-    private static Sprite[] heroSwordFrames;
     private static Sprite trainingDummySprite;
 
     [MenuItem("Game/Training Ground/Rebuild Prototype Scene")]
@@ -23,7 +20,7 @@ public static class TrainingGroundSceneBuilder
     {
         EnsureFolders();
         EnsurePrototypeSprite();
-        LoadHeroFrames();
+        trainingDummySprite = LoadPixelSprite("Assets/Art/Characters/TrainingDummy.png");
         Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
         BuildRoom();
         EditorSceneManager.SaveScene(scene, ScenePath);
@@ -77,10 +74,6 @@ public static class TrainingGroundSceneBuilder
 
         GameObject player = new GameObject("Player");
         player.transform.position = new Vector3(-3f, -0.5f, 0f);
-        SpriteRenderer playerBody = player.AddComponent<SpriteRenderer>();
-        playerBody.sprite = heroBodyFrames[0];
-        playerBody.color = Color.white;
-        playerBody.sortingOrder = 2;
         player.transform.localScale = Vector3.one;
         Rigidbody2D rigidbody = player.AddComponent<Rigidbody2D>();
         rigidbody.gravityScale = 0f;
@@ -89,22 +82,13 @@ public static class TrainingGroundSceneBuilder
         playerCollider.size = new Vector2(0.82f, 0.92f);
 
         TrainingPlayerController controller = player.AddComponent<TrainingPlayerController>();
-        Transform weaponTransform = new GameObject("Greatsword").transform;
-        weaponTransform.SetParent(player.transform, false);
-        SpriteRenderer swordRenderer = weaponTransform.gameObject.AddComponent<SpriteRenderer>();
-        swordRenderer.sprite = heroSwordFrames[0];
-        swordRenderer.sortingOrder = 3;
-        TrainingPlayerView playerView = player.AddComponent<TrainingPlayerView>();
-        SetPrivateField(playerView, "bodyRenderer", playerBody);
-        SetPrivateField(playerView, "swordRenderer", swordRenderer);
-        SetPrivateField(playerView, "bodyFrames", heroBodyFrames);
-        SetPrivateField(playerView, "swordFrames", heroSwordFrames);
+        var playerView = player.AddComponent<TrainingPlayerView>();
+        var visual = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Art/Characters/AzureVanguard/AzureVanguard.prefab"));
+        visual.name = "Character Visual"; visual.transform.SetParent(player.transform, false);
+        player.AddComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder = 2;
+        playerView.BindCommonRig(visual.GetComponent<Game.Characters.CommonCharacterRig>());
         SetPrivateField(controller, "playerView", playerView);
-        TrainingHeroAnimationSet upgradedHero = AssetDatabase.LoadAssetAtPath<TrainingHeroAnimationSet>(
-            "Assets/Art/Characters/HeroV2/TrainingHeroV2.asset");
-        TrainingHeroAnimationSet mannequin = AssetDatabase.LoadAssetAtPath<TrainingHeroAnimationSet>(TrainingMannequinInstaller.SetPath);
-        if (mannequin != null) TrainingMannequinInstaller.Bind(playerView, mannequin);
-        else if (upgradedHero != null) TrainingHeroV2Installer.Bind(playerView, upgradedHero);
+        player.AddComponent<TrainingMotionReview>().Bind(playerView);
 
         GameObject dummy = new GameObject("Training Dummy");
         dummy.transform.position = new Vector3(1.5f, 1.3f, 0f);
@@ -128,24 +112,6 @@ public static class TrainingGroundSceneBuilder
         CreateRoomLabel("TARGET", new Vector2(0.5f, 2.6f), new Color(0.94f, 0.66f, 0.36f));
         TrainingDungeonInstaller.ApplyToScene(SceneManager.GetActiveScene());
         Selection.activeGameObject = session.gameObject;
-    }
-
-    private static void LoadHeroFrames()
-    {
-        heroBodyFrames = new Sprite[32];
-        heroSwordFrames = new Sprite[32];
-        trainingDummySprite = LoadPixelSprite("Assets/Art/Characters/TrainingDummy.png");
-        for (int i = 0; i < 32; i++)
-        {
-            heroBodyFrames[i] = LoadHeroFrame("Body/body_" + (i + 1).ToString("D2") + ".png");
-            heroSwordFrames[i] = LoadHeroFrame("Sword/sword_" + (i + 1).ToString("D2") + ".png");
-        }
-    }
-
-    private static Sprite LoadHeroFrame(string relativePath)
-    {
-        string path = HeroFramesPath + "/" + relativePath;
-        return LoadPixelSprite(path);
     }
 
     private static Sprite LoadPixelSprite(string path)

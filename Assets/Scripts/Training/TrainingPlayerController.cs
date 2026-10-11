@@ -51,6 +51,7 @@ public sealed class TrainingPlayerController : MonoBehaviour
     public float Mana => mana;
     public float ReservedMana => reservedMana;
     public float MaxMana => maxMana;
+    public float SpecialManaCost => specialManaCost;
     public bool SpecialManaFailed => Time.unscaledTime < specialFailureUntil;
     public Vector2 AimDirection => aimDirection;
     public Vector2 MoveInput => moveInput;
@@ -74,7 +75,7 @@ public sealed class TrainingPlayerController : MonoBehaviour
         Advance(Time.deltaTime);
         float activeDuration = IsSpecialAttack ? spinActiveSeconds : attackActiveTime;
         float recoveryDuration = IsSpecialAttack ? spinRecoverySeconds : attackRecovery;
-        playerView?.SetState(moveInput, aimDirection, IsAttackPending, IsAttackActive, attackDirection, attackSequence,
+        playerView?.SetState(moveInput, aimDirection, IsAttackPending, IsAttackActive, attackDirection,
             phaseRemaining, attackWindup, activeDuration, IsDashing, dashDirection, DashProgress,
             AttackClip, IsAttackRecovering, 1f - phaseRemaining / Mathf.Max(.001f, recoveryDuration), IsCharging, chargeElapsed);
     }
@@ -106,7 +107,6 @@ public sealed class TrainingPlayerController : MonoBehaviour
         }
         if (specialRequested && Time.unscaledTime > specialRequestExpiresAt) specialRequested = false;
         if (!rightHeld) specialRequested = false;
-        if (k != null && k.rKey.wasPressedThisFrame) TrainingGroundSession.Instance?.ResetSession();
     }
     private void UpdateAim()
     {

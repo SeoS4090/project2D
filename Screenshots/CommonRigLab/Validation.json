@@ -1,0 +1,26 @@
+{
+    "passed": [
+        "Both appearances reference the same motion asset",
+        "Two different appearance assets",
+        "Distinct clothing and blade art, not only renderer tint",
+        "All clips contain zero Sprite/object-reference curves",
+        "All animation bindings target Transform properties",
+        "Main hand connects to grip within one source pixel across all sampled views/motions",
+        "Off hand connects to grip within one source pixel across all sampled views/motions",
+        "Both outfits produce identical joint transforms for identical animation input",
+        "Changing lower movement direction/phase leaves attacking upper body unchanged",
+        "Changing upper motion/aim leaves lower walk pose unchanged",
+        "300 animation updates perform zero Sprite assignments at fixed view",
+        "Dash lower layer preserves slash grips",
+        "Appearance replacement reuses motion asset and grip geometry",
+        "Integer root snapping preserves both grip connections",
+        "Four-direction slash comparison rendered"
+    ],
+    "maximumMainGripErrorPixels": 0.02205459587275982,
+    "maximumOffGripErrorPixels": 0.031570132821798328,
+    "maximumAppearancePoseDifference": 0.0,
+    "samples": 24768,
+    "clips": 24,
+    "staticSprites": 64,
+    "failure": ""
+}

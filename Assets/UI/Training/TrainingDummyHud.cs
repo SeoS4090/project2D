@@ -4,6 +4,7 @@ using UnityEngine;
 /// <summary>World-space training statistics owned by the dummy this Canvas is attached to.</summary>
 public sealed class TrainingDummyHud : MonoBehaviour
 {
+    public const string EmptyStatistics = "<color=#FFE1A1>0</color> / <color=#F4A7C4>0</color>\n<color=#93DCEC>0</color>";
     public TMP_Text statistics;
     private TrainingDummy dummy;
     private float nextRefresh;
@@ -12,7 +13,6 @@ public sealed class TrainingDummyHud : MonoBehaviour
     {
         if (dummy == null || statistics == null || Time.unscaledTime < nextRefresh) return;
         nextRefresh = Time.unscaledTime + .08f;
-        int seconds = Mathf.FloorToInt(dummy.TrainingSeconds);
-        statistics.text = $"누적 피해   <color=#FFE1A1>{dummy.TotalDamage:0}</color>\n최대 피해   {dummy.HighestHit:0}   ·   타격 {dummy.HitCount}\n훈련 시간   {seconds / 60:00}:{seconds % 60:00}";
+        statistics.text = $"<color=#FFE1A1>{dummy.DamagePerSecond:0.#}</color> / <color=#F4A7C4>{dummy.HighestHit:0.#}</color>\n<color=#93DCEC>{dummy.CurrentDamage:0.#}</color>";
     }
 }

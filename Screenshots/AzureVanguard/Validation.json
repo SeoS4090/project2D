@@ -1,0 +1,17 @@
+{
+    "passed": [
+        "Appearance can be assigned before first animation sample after instantiation",
+        "Complete new appearance with all 32 directional part references",
+        "Existing motion asset reused without per-character clip copies",
+        "Registered exactly 32 sprites",
+        "4x texture density retains original rig world dimensions",
+        "New character preserves both grip connections across seven motions and all sampled aim angles",
+        "No missing rendered body parts",
+        "Every rendered part uses the new registered sheet",
+        "Saved TrainingGround uses the new character",
+        "Actual assembled character sheet and motion frames rendered"
+    ],
+    "samples": 15624,
+    "maximumGripErrorPixels": 0.00000764428114052862,
+    "failure": ""
+}

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4aa0c02d246c984aa4935c1b7fc9931, type: 3}
+  m_Name: SharedMotions
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Characters.CommonRigMotions
+  rigId: rig.sd-cutout.v1
+  idle:
+  - {fileID: 7400000, guid: a51b324e532d56b49a9080d8224b8b62, type: 2}
+  - {fileID: 7400000, guid: 77346d360a9067c408f5ac66cd64ca6e, type: 2}
+  - {fileID: 7400000, guid: 6534b726e99656c44a41a88ba205f6a7, type: 2}
+  - {fileID: 7400000, guid: 04cb671ff0719a442a4677b1660bc55f, type: 2}
+  walk:
+  - {fileID: 7400000, guid: 5f48cbf8bacedc8408f04e8b496b66ed, type: 2}
+  - {fileID: 7400000, guid: 76a9deefab0833945aa4dce676015df4, type: 2}
+  - {fileID: 7400000, guid: 2b8a32994e073b84c95be592de27d235, type: 2}
+  - {fileID: 7400000, guid: 90408d7634e4ade4abb4b231fadf354c, type: 2}
+  slash:
+  - {fileID: 7400000, guid: 959b07cfca8dc5c4fb7c5a15ff6fe07f, type: 2}
+  - {fileID: 7400000, guid: 47fa3b1c1c5fb4d41a1d6bb0ddc64457, type: 2}
+  - {fileID: 7400000, guid: 95e6436f2f62cd1458431d0cf3ff8502, type: 2}
+  - {fileID: 7400000, guid: 8469d7fb5e92b58409a656f20187c3e1, type: 2}
+  lowerIdle:
+  - {fileID: 7400000, guid: 3cb9d28fa2e5aae40bbbbd5a52f3c2fa, type: 2}
+  - {fileID: 7400000, guid: d48e5c1cd30fdcd4ebed9487c17e49e7, type: 2}
+  - {fileID: 7400000, guid: 18fa862e2edfcd04dbdef451a753a4e6, type: 2}
+  - {fileID: 7400000, guid: 3caf6333bf391874997251609d0b0118, type: 2}
+  lowerWalk:
+  - {fileID: 7400000, guid: 5576ad48f557c494d90fffde294c49e4, type: 2}
+  - {fileID: 7400000, guid: e30718ba8299b064abc2b7054f683e5b, type: 2}
+  - {fileID: 7400000, guid: 193cafa718895cb4bbf4511427737bb6, type: 2}
+  - {fileID: 7400000, guid: 58c3f6b9582d88248b06b9f8f59dd7cd, type: 2}
+  lowerDash:
+  - {fileID: 7400000, guid: 6d8e2e7863ff211489f4b41dca1f7a73, type: 2}
+  - {fileID: 7400000, guid: 2a92891c587b99842b66b50e2536950f, type: 2}
+  - {fileID: 7400000, guid: f245a82038d84e6499ea23b905413e23, type: 2}
+  - {fileID: 7400000, guid: 90fd81227bd72ac4581453a6a168c8f1, type: 2}
+  reverse:
+  - {fileID: 7400000, guid: a4e47359cb5f2ad42b0cc60b695e890d, type: 2}
+  - {fileID: 7400000, guid: 1f4eab013f87b184588415b5dafafe98, type: 2}
+  - {fileID: 7400000, guid: cdef15639fa826847976b5ddab907734, type: 2}
+  - {fileID: 7400000, guid: a798cf945a8442f4f95ea5d28827518b, type: 2}
+  heavy:
+  - {fileID: 7400000, guid: 97ffefbb08a2fcb4493efe83501749c7, type: 2}
+  - {fileID: 7400000, guid: 21d25f5e36773ac44b2c45f0f797811f, type: 2}
+  - {fileID: 7400000, guid: 78b8e8aa3ef87194fbb550efc0a514f5, type: 2}
+  - {fileID: 7400000, guid: af2dfe223cd5b5549aba006f2f411367, type: 2}
+  charge:
+  - {fileID: 7400000, guid: 262ee7a074b91004bad58de385a94721, type: 2}
+  - {fileID: 7400000, guid: 885b9174271471141a043f5da64f157e, type: 2}
+  - {fileID: 7400000, guid: c4c4fbbb14c33be45bfe79a4a03134ea, type: 2}
+  - {fileID: 7400000, guid: 8a45ecf09a9d419429fd741aa2db955b, type: 2}
+  spin:
+  - {fileID: 7400000, guid: f9faef28a1798fa46aafc3b04f7ce544, type: 2}
+  - {fileID: 7400000, guid: cf674e79b92f0124d8dc7d323096efa5, type: 2}
+  - {fileID: 7400000, guid: 172997311a603d34989e039f17667851, type: 2}
+  - {fileID: 7400000, guid: 18a4b56c675e33a4da7f5832670c34a1, type: 2}
+  upperMask: {fileID: 31900000, guid: d1a3e40c0b804bd4faa336fcfad7df28, type: 2}
+  lowerMask: {fileID: 31900000, guid: d76a32b3e1d44d14a91c0a75c8ad0155, type: 2}

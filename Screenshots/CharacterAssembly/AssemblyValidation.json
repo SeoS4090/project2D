@@ -1,0 +1,33 @@
+{
+    "catalog": "training-7f7af1daa02e",
+    "passed": [
+        "Imported baseline validates",
+        "Incomplete 16-angle/garment art blocks release",
+        "Required garment cannot be omitted",
+        "Unknown palette rejected",
+        "Weapon family mismatch rejected",
+        "Tampered snapshot rejected",
+        "Missing pose sprite rejected",
+        "Validation fixture does not mutate shared catalog",
+        "Draft required-slot empty rejected",
+        "Independent upper/lower palettes assemble",
+        "Assembly leaves baseline immutable",
+        "One lease per selected part",
+        "Eight renderer pieces, shared sprites, no whole-character bake",
+        "All 432 upper/lower frame combinations sampled",
+        "10,000 presentation samples allocate 0 managed bytes on test thread",
+        "Invalid replacement retains previous appearance",
+        "Newer request replaces pending request",
+        "Late request cannot overwrite newer appearance",
+        "Late provider completion returns its lease",
+        "100 swaps retain exactly one current set of leases",
+        "Pool release returns all owned references",
+        "Released actor can be reused",
+        "Cropped sprites retain integer pixel pivots",
+        "All imported pieces use 32 PPU"
+    ],
+    "failure": "",
+    "referenceBaseline": 4,
+    "referenceAfter": 4,
+    "renderAllocatedBytes": 0
+}

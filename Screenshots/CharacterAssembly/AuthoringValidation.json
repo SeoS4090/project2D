@@ -1,0 +1,18 @@
+{
+    "passed": [
+        "Draft saved and read back at revision 1",
+        "Atomic update preserves previous draft backup",
+        "Stale draft cannot overwrite newer revision",
+        "Conflict leaves current draft intact",
+        "Draft path traversal rejected",
+        "Changed preview requires new review",
+        "Training snapshot and current pointer published",
+        "Published revision is immutable",
+        "Rejected republish preserves published bytes",
+        "Revision change invalidates approval hash",
+        "New revision atomically updates current pointer and preserves backup",
+        "Training catalog cannot be published for release",
+        "Future schema rejected without saving"
+    ],
+    "failure": ""
+}

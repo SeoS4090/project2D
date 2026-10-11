@@ -36,6 +36,12 @@ public static class TrainingUiInstaller
         var existing = hud.GetComponentInChildren<TrainingHudView>(true);
         if (existing != null)
         {
+            if (existing.minimalPresentation)
+            {
+                TrainingHallInstaller.ApplyHud(UnityEngine.Object.FindFirstObjectByType<TrainingDummy>());
+                EditorSceneManager.MarkSceneDirty(scene);
+                return;
+            }
             UpgradeLayout(existing);
             EnsureDummyStatistics(scene);
             hud.Configure(existing);
@@ -56,7 +62,6 @@ public static class TrainingUiInstaller
         var title=Label("TrainingTitle",heading,"TRAINING GROUND",26,C("463019"),18,15,344,40); title.alignment=TextAlignmentOptions.Center;
 
         var resources=Panel("ResourcesPanel",root,480,244); Corner(resources,new Vector2(0,0),new Vector2(20,20));view.resourcesPanel=resources;
-        view.health=Label("Health",resources,"허수아비",20,Ink,24,20,430,28);view.healthFill=Bar("HealthBar",resources,70,24,52,432,16);
         view.mana=Label("Mana",resources,"마나",20,Ink,24,76,430,28);view.manaFill=Bar("ManaBar",resources,72,24,108,432,16);
         view.charge=Label("Charge",resources,"회전 베기   0%",20,Ink,24,132,430,28);view.chargeFill=Bar("ChargeBar",resources,-1,24,164,432,16);
         view.dash=Label("Dash",resources,"대시 2/2   SPACE",20,Ink,94,202,350,28);
@@ -96,7 +101,6 @@ public static class TrainingUiInstaller
         }
         var r=view.resourcesPanel;
         r.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,244);
-        Place((RectTransform)view.health.transform,24,20,430,28);Place((RectTransform)view.healthFill.transform.parent,24,52,432,16);
         Place((RectTransform)view.mana.transform,24,76,430,28);Place((RectTransform)view.manaFill.transform.parent,24,108,432,16);
         Place((RectTransform)view.charge.transform,24,132,430,28);Place((RectTransform)view.chargeFill.transform.parent,24,164,432,16);
         Place((RectTransform)view.dash.transform,94,202,350,28);
@@ -120,7 +124,7 @@ public static class TrainingUiInstaller
             var background=Panel("StatisticsPanel",root,380,174);Stretch(background);
             Label("Title",background,"허수아비 / 훈련 기록",22,Gold,24,14,332,34);
             var worldHud=root.gameObject.AddComponent<TrainingDummyHud>();
-            worldHud.statistics=Label("Statistics",background,"누적 피해   0\n최대 피해   0   ·   타격 0\n훈련 시간   00:00",22,Ink,24,55,332,101);
+            worldHud.statistics=Label("Statistics",background,TrainingDummyHud.EmptyStatistics,22,Ink,24,55,332,101);
             // An information-only label above a target must never intercept attack input.
             foreach(var graphic in root.GetComponentsInChildren<UnityEngine.UI.Graphic>())graphic.raycastTarget=false;
             PrefabUtility.SaveAsPrefabAsset(root.gameObject,"Assets/UI/Training/TrainingDummyStatistics.prefab");
