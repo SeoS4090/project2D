@@ -1,32 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using ProjectAr.GameData;
 
 /// <summary>Training-only greatsword action channel. All tuning values are provisional.</summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public sealed class TrainingPlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f, dashSpeed = 13f, dashDuration = .16f, dashRechargeSeconds = 1.1f;
-    [SerializeField] private int maxDashCharges = 2;
-    [SerializeField] private float attackRange = 1.45f, attackHalfAngle = 58f, attackCooldown = .42f, attackDamage = 25f;
-    [SerializeField] private float attackWindup = .08f, attackActiveTime = .12f;
-    [Header("Training greatsword combo / temporary values")]
-    [SerializeField] private float attackRecovery = .14f, comboLinkWindow = .22f, comboEndGap = .28f;
-    [Header("Training charge / temporary values")]
-    [SerializeField] private float maxChargeSeconds = 1.4f, chargeMoveMultiplier = .45f;
-    [SerializeField] private float spinActiveSeconds = .48f, spinRecoverySeconds = .2f;
-    [SerializeField] private float spinDamageMinimum = 35f, spinDamageMaximum = 75f, spinRange = 1.65f;
-    [SerializeField] private float maxMana = 100f, specialManaCost = 20f, manaRegen = 8f;
+    [SerializeField] private int trainingLoadoutId = TrainingLoadoutIds.TrainingGreatsword.Value;
+    private TrainingLoadoutSnapshot definition;
+    private float moveSpeed, dashSpeed, dashDuration, dashRechargeSeconds;
+    private float dashBufferSeconds;
+    private Vector2 lastMoveDirection;
+    private readonly DashInputBuffer dashInput = new DashInputBuffer();
+    private readonly DashMotionClock dashMotion = new DashMotionClock();
+    private int maxDashCharges;
+    private float attackRange, attackHalfAngle, attackCooldown, attackDamage, attackWindup, attackActiveTime;
+    private float attackRecovery, comboLinkWindow, comboEndGap, comboBreakGap;
+    private float maxChargeSeconds, chargeMoveMultiplier, spinWindupSeconds;
+    private float spinActiveSeconds, spinRecoverySeconds, spinDamageMinimum, spinDamageMaximum, spinRange;
+    private float maxMana, specialManaCost, manaRegen;
     [SerializeField] private TrainingPlayerView playerView;
     public enum ActionPhase { Idle, Prepare, Active, Recover, Link, Gap, Charging, SpinPrepare, SpinActive, SpinRecover }
     public ActionPhase Phase { get; private set; }
-    private static readonly string[] ComboClips = { "attack", "attack_reverse", "attack_heavy" };
     private Rigidbody2D body;
     private Camera worldCamera;
     private Vector2 moveInput, aimDirection = Vector2.right, attackDirection = Vector2.right, dashDirection;
     private Vector3 spawnPosition;
     private int dashCharges, attackSequence, comboIndex;
-    private float dashRemaining, rechargeRemaining, attackCooldownRemaining, phaseRemaining, chargeElapsed, releasedCharge;
+    private float rechargeRemaining, attackCooldownRemaining, phaseRemaining, chargeElapsed, releasedCharge;
     private float mana, reservedMana, normalReturnAt;
     private float specialFailureUntil, specialRequestExpiresAt;
     private bool normalRequested, specialRequested, leftHeld, rightHeld;
@@ -37,8 +39,8 @@ public sealed class TrainingPlayerController : MonoBehaviour
     public int MaxDashCharges => maxDashCharges;
     public int AttackSequence => attackSequence;
     public int ComboHit => comboIndex + 1;
-    public int ComboCount => ComboClips.Length;
-    public bool IsDashing => dashRemaining > 0f;
+    public int ComboCount => definition?.Steps.Count ?? 0;
+    public bool IsDashing => dashMotion.IsDashing;
     public bool IsCharging => Phase == ActionPhase.Charging;
     public bool IsAttackPending => Phase == ActionPhase.Prepare || Phase == ActionPhase.SpinPrepare;
     public bool IsAttackActive => Phase == ActionPhase.Active || Phase == ActionPhase.SpinActive;
@@ -57,16 +59,39 @@ public sealed class TrainingPlayerController : MonoBehaviour
     public Vector2 MoveInput => moveInput;
     public Vector2 AttackDirection => attackDirection;
     public Vector2 DashDirection => dashDirection;
-    public string AttackClip => IsSpecialAttack ? "spin" : ComboClips[comboIndex];
-    public float DashProgress => Mathf.Clamp01(1f - dashRemaining / Mathf.Max(.001f, dashDuration));
+    public string AttackClip => IsSpecialAttack ? "spin" : definition?.Steps[comboIndex].clip ?? string.Empty;
+    public float DashProgress => Mathf.Clamp01(1f - (float)dashMotion.Remaining / Mathf.Max(.001f, dashDuration));
     public float AttackCooldownFraction => Mathf.Clamp01(attackCooldownRemaining / Mathf.Max(.001f, attackCooldown));
     public float DashRechargeFraction => dashCharges >= maxDashCharges ? 1f : 1f - Mathf.Clamp01(rechargeRemaining / Mathf.Max(.001f, dashRechargeSeconds));
     private void Awake()
     {
+        body = GetComponent<Rigidbody2D>();
+        try { ApplyDefinition(TrainingDataCatalog.Current.Get(new TrainingLoadoutId(trainingLoadoutId))); }
+        catch (System.Exception error) { enabled = false; Debug.LogError("Training data load failed: " + error.Message, this); return; }
         body = GetComponent<Rigidbody2D>(); worldCamera = Camera.main; spawnPosition = transform.position;
         hud = FindFirstObjectByType<TrainingGroundHud>();
         dashCharges = maxDashCharges; mana = maxMana; body.gravityScale = 0f; body.freezeRotation = true;
         body.interpolation = RigidbodyInterpolation2D.Interpolate;
+    }
+    private void ApplyDefinition(TrainingLoadoutSnapshot value)
+    {
+        definition = value;
+        var m = value.Movement; moveSpeed = m.move_speed; dashSpeed = m.dash_speed; dashDuration = m.dash_duration_sec;
+        dashRechargeSeconds = m.dash_recharge_sec; maxDashCharges = m.max_dash_charges;
+        dashBufferSeconds = m.dash_buffer_sec;
+        maxMana = value.Mana.max_mana; manaRegen = value.Mana.regen_per_sec;
+        var combo = value.Combo; attackCooldown = combo.cooldown_sec; comboLinkWindow = combo.link_window_sec;
+        comboEndGap = combo.end_gap_sec; comboBreakGap = combo.break_gap_sec;
+        var charge = value.Charge; maxChargeSeconds = charge.max_charge_sec; chargeMoveMultiplier = charge.move_ratio;
+        spinWindupSeconds = charge.windup_sec; spinActiveSeconds = charge.active_sec; spinRecoverySeconds = charge.recovery_sec;
+        spinDamageMinimum = charge.damage_min; spinDamageMaximum = charge.damage_max; spinRange = charge.range_units; specialManaCost = charge.mana_cost;
+        ApplyStep(0);
+    }
+    private void ApplyStep(int index)
+    {
+        var step = definition.Steps[index];
+        attackWindup = step.windup_sec; attackActiveTime = step.active_sec; attackRecovery = step.recovery_sec;
+        attackRange = step.range_units; attackHalfAngle = step.half_angle_deg; attackDamage = step.damage;
     }
     private void Update()
     {
@@ -76,16 +101,28 @@ public sealed class TrainingPlayerController : MonoBehaviour
         float activeDuration = IsSpecialAttack ? spinActiveSeconds : attackActiveTime;
         float recoveryDuration = IsSpecialAttack ? spinRecoverySeconds : attackRecovery;
         playerView?.SetState(moveInput, aimDirection, IsAttackPending, IsAttackActive, attackDirection,
-            phaseRemaining, attackWindup, activeDuration, IsDashing, dashDirection, DashProgress,
+            phaseRemaining, IsSpecialAttack ? spinWindupSeconds : attackWindup, activeDuration, IsDashing, dashDirection, DashProgress,
             AttackClip, IsAttackRecovering, 1f - phaseRemaining / Mathf.Max(.001f, recoveryDuration), IsCharging, chargeElapsed);
     }
-    private void FixedUpdate() => body.linearVelocity = IsDashing ? dashDirection * dashSpeed : moveInput * moveSpeed * (IsCharging ? chargeMoveMultiplier : 1f);
+    private void FixedUpdate()
+    {
+        float dt = Time.fixedDeltaTime;
+        var step = dashMotion.Advance(dt, Time.fixedUnscaledTimeAsDouble - Time.fixedUnscaledDeltaTime,
+            Time.fixedUnscaledDeltaTime, dashDuration, dashInput, dashCharges);
+        Vector2 displacement = dashDirection * (dashSpeed * (float)step.PreviousDashSeconds);
+        if (step.StartedNext) BeginDash();
+        displacement += dashDirection * (dashSpeed * (float)step.NextDashSeconds);
+        displacement += moveInput * (moveSpeed * (IsCharging ? chargeMoveMultiplier : 1f) * (float)step.MoveSeconds);
+        // Preserve dynamic Rigidbody collision handling; integrate only the remaining dash fraction.
+        body.linearVelocity = displacement / dt;
+    }
     private void ReadInput()
     {
         var k = Keyboard.current; var m = Mouse.current;
         float x = k == null ? 0 : (k.dKey.isPressed || k.rightArrowKey.isPressed ? 1 : 0) - (k.aKey.isPressed || k.leftArrowKey.isPressed ? 1 : 0);
         float y = k == null ? 0 : (k.wKey.isPressed || k.upArrowKey.isPressed ? 1 : 0) - (k.sKey.isPressed || k.downArrowKey.isPressed ? 1 : 0);
         moveInput = Vector2.ClampMagnitude(new Vector2(x, y), 1f);
+        if (moveInput.sqrMagnitude > .001f) lastMoveDirection = moveInput.normalized;
         if (m != null)
         {
             bool overUi = hud != null && hud.ContainsPointer(m.position.ReadValue());
@@ -98,7 +135,12 @@ public sealed class TrainingPlayerController : MonoBehaviour
         // Ownership follows the initial press; dragging a held UI click into the room stays a UI gesture.
         leftHeld = m != null && m.leftButton.isPressed && leftWorldPress;
         rightHeld = m != null && m.rightButton.isPressed && rightWorldPress;
-        if (k != null && k.spaceKey.wasPressedThisFrame) TryDash();
+        if (k != null && k.spaceKey.wasPressedThisFrame)
+        {
+            dashInput.Press(Time.unscaledTimeAsDouble, dashBufferSeconds, dashCharges);
+            // Idle presses start immediately, including a zero-length buffer window.
+            if (dashInput.Consume(Time.unscaledTimeAsDouble, IsDashing, dashCharges)) TryDash();
+        }
         if (m != null && m.leftButton.wasPressedThisFrame && leftWorldPress) normalRequested = true;
         if (m != null && m.rightButton.wasPressedThisFrame && rightWorldPress)
         {
@@ -119,8 +161,14 @@ public sealed class TrainingPlayerController : MonoBehaviour
     private void TryDash()
     {
         if (dashCharges <= 0 || IsDashing) return;
-        dashDirection = moveInput.sqrMagnitude > .001f ? moveInput.normalized : aimDirection;
-        dashCharges--; dashRemaining = dashDuration;
+        dashMotion.Start(dashDuration);
+        BeginDash();
+    }
+    private void BeginDash()
+    {
+        dashDirection = moveInput.sqrMagnitude > .001f ? moveInput.normalized
+            : lastMoveDirection.sqrMagnitude > .001f ? lastMoveDirection : aimDirection;
+        dashCharges--;
         if (rechargeRemaining <= 0) rechargeRemaining = dashRechargeSeconds;
     }
     private bool StartCharge()
@@ -133,6 +181,7 @@ public sealed class TrainingPlayerController : MonoBehaviour
     }
     private void StartBasic(int index)
     {
+        ApplyStep(index);
         comboIndex = index; normalRequested = false; BeginAction(ActionPhase.Prepare, attackWindup);
         attackCooldownRemaining = attackCooldown;
     }
@@ -143,7 +192,7 @@ public sealed class TrainingPlayerController : MonoBehaviour
     private void ReleaseCharge()
     {
         releasedCharge = ChargeFraction;
-        BeginAction(ActionPhase.SpinPrepare, attackWindup);
+        BeginAction(ActionPhase.SpinPrepare, spinWindupSeconds);
     }
     private void EvaluateRequest()
     {
@@ -156,7 +205,6 @@ public sealed class TrainingPlayerController : MonoBehaviour
     {
         mana = Mathf.Min(maxMana, mana + manaRegen * dt);
         attackCooldownRemaining = Mathf.Max(0, attackCooldownRemaining - dt);
-        dashRemaining = Mathf.Max(0, dashRemaining - dt);
         if (dashCharges < maxDashCharges)
         {
             rechargeRemaining -= dt;
@@ -181,12 +229,12 @@ public sealed class TrainingPlayerController : MonoBehaviour
                 case ActionPhase.Prepare: Phase = ActionPhase.Active; phaseRemaining = attackActiveTime; ResolveAttack(); break;
                 case ActionPhase.Active: Phase = ActionPhase.Recover; phaseRemaining = attackRecovery; break;
                 case ActionPhase.Recover:
-                    normalReturnAt = Time.time + (comboIndex == ComboClips.Length - 1 ? comboEndGap : attackCooldownRemaining);
+                    normalReturnAt = Time.time + (comboIndex == ComboCount - 1 ? comboEndGap : attackCooldownRemaining);
                     if (specialRequested && StartCharge()) break;
-                    Phase = comboIndex == ComboClips.Length - 1 ? ActionPhase.Gap : ActionPhase.Link;
+                    Phase = comboIndex == ComboCount - 1 ? ActionPhase.Gap : ActionPhase.Link;
                     phaseRemaining = Phase == ActionPhase.Gap ? comboEndGap : comboLinkWindow; EvaluateRequest(); break;
                 case ActionPhase.Link:
-                    comboIndex = 0; Phase = ActionPhase.Gap; phaseRemaining = .08f; normalReturnAt = Time.time + phaseRemaining; break;
+                    comboIndex = 0; Phase = ActionPhase.Gap; phaseRemaining = comboBreakGap; normalReturnAt = Time.time + phaseRemaining; break;
                 case ActionPhase.Gap: Phase = ActionPhase.Idle; EvaluateRequest(); break;
                 case ActionPhase.SpinPrepare:
                     mana = Mathf.Max(0, mana - reservedMana); reservedMana = 0;
@@ -225,11 +273,13 @@ public sealed class TrainingPlayerController : MonoBehaviour
     public void ResetTrainingState()
     {
         transform.position = spawnPosition; body.linearVelocity = Vector2.zero; moveInput = Vector2.zero;
-        dashCharges = maxDashCharges; dashRemaining = rechargeRemaining = attackCooldownRemaining = phaseRemaining = 0;
+        dashCharges = maxDashCharges; rechargeRemaining = attackCooldownRemaining = phaseRemaining = 0;
+        dashMotion.Clear();
         chargeElapsed = releasedCharge = reservedMana = normalReturnAt = 0; mana = maxMana;
         specialFailureUntil = specialRequestExpiresAt = 0;
         normalRequested = specialRequested = leftHeld = rightHeld = false; comboIndex = 0; Phase = ActionPhase.Idle;
         leftWorldPress = rightWorldPress = false;
+        lastMoveDirection = Vector2.zero; dashInput.Clear();
         hitThisAction.Clear(); playerView?.ResetView();
     }
 }

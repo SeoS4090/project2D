@@ -146,6 +146,13 @@ def validate(t, fields, source=None):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('xlsx');ap.add_argument('--report');args=ap.parse_args()
+    # Keep legacy callers working after the explicitly versioned authoring migration.
+    with zipfile.ZipFile(args.xlsx) as archive:
+        if 'xl/tables/table1.xml' in archive.namelist():
+            names=[s.attrib['name'] for s in ET.fromstring(archive.read('xl/workbook.xml')).findall('s:sheets/s:sheet',NS)]
+            if '무기' in names:
+                import data_pipeline
+                return data_pipeline.main()
     root=Path(__file__).resolve().parents[2]
     contract=json.loads(Path(__file__).with_name('myth_schema.json').read_text(encoding='utf-8'))
     try:

@@ -1,3 +1,4 @@
+using ProjectAr.CharacterRig.Editor;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -5,29 +6,43 @@ using Game.Characters;
 using UnityEditor;
 using UnityEngine;
 
-public static class SharedRigBuilder
+public sealed class SharedRigBuilder
 {
-    public const string Root = "Assets/Art/Characters/SharedRig/";
+    public const string Root = "Packages/com.projectar.character-rig/Runtime/Defaults/";
     public const string MotionsPath = Root + "SharedMotions.asset";
     public static readonly string[] Parts = { "head", "torso", "upperArm", "forearm", "hand", "leg", "weapon", "shadow" };
     public static readonly string[] Paths = { "", "Upper", "Upper/Head", "Upper/Torso", "Upper/MainArm", "Upper/MainArm/Forearm", "Upper/MainArm/Forearm/Tip",
         "Upper/OffArm", "Upper/OffArm/Forearm", "Upper/OffArm/Forearm/Tip", "Upper/Weapon", "Upper/Weapon/Blade", "Upper/Weapon/MainGrip", "Upper/Weapon/MainGrip/Hand",
         "Upper/Weapon/OffGrip", "Upper/Weapon/OffGrip/Hand", "Lower", "Lower/LeftLeg", "Lower/RightLeg", "Shadow" };
 
-    [MenuItem("Game/Characters/Common Rig/Generate Shared Motions")]
+    private readonly string outputRoot;
+    private SharedRigBuilder(string output) { outputRoot = CharacterAssetBuilder.WritableFolder(output); }
+    [MenuItem("Tools/Character Rig/Generate Motion Copy")]
     public static void Generate()
     {
-        Directory.CreateDirectory(Root + "Clips");
+        var folder = EditorUtility.SaveFolderPanel("Output folder inside Assets", "Assets", "");
+        if (string.IsNullOrEmpty(folder)) return;
+        GenerateAt(FileUtil.GetProjectRelativePath(folder));
+    }
+    public static CommonRigMotions GenerateAt(string output)
+    {
+        var builder = new SharedRigBuilder(output);
+        builder.Build();
+        return AssetDatabase.LoadAssetAtPath<CommonRigMotions>(builder.outputRoot + "SharedMotions.asset");
+    }
+    private void Build()
+    {
+        Directory.CreateDirectory(outputRoot + "Clips");
         AssetDatabase.Refresh();
-        var motions = LoadOrCreate<CommonRigMotions>(MotionsPath);
+        var motions = LoadOrCreate<CommonRigMotions>(outputRoot + "SharedMotions.asset");
         motions.upperMask = MakeMask("Upper"); motions.lowerMask = MakeMask("Lower");
         motions.idle = MakeClips("idle", true); motions.walk = MakeClips("walk", true); motions.slash = MakeClips("slash", true);
         motions.reverse = MakeClips("reverse", true); motions.heavy = MakeClips("heavy", true);
         motions.charge = MakeClips("charge", true); motions.spin = MakeClips("spin", true);
         motions.lowerIdle = MakeClips("idle", false); motions.lowerWalk = MakeClips("walk", false); motions.lowerDash = MakeClips("dash", false);
         EditorUtility.SetDirty(motions);
-        var material = AssetDatabase.LoadAssetAtPath<Material>(Root + "RigMaterial.mat");
-        if (material == null) { material = new Material(Shader.Find("Sprites/Default")); AssetDatabase.CreateAsset(material, Root + "RigMaterial.mat"); }
+        var material = AssetDatabase.LoadAssetAtPath<Material>(outputRoot + "RigMaterial.mat");
+        if (material == null) { material = new Material(Shader.Find("Sprites/Default")); AssetDatabase.CreateAsset(material, outputRoot + "RigMaterial.mat"); }
         AssetDatabase.SaveAssets();
     }
 
@@ -38,9 +53,9 @@ public static class SharedRigBuilder
         return asset;
     }
 
-    private static AvatarMask MakeMask(string branch)
+    private AvatarMask MakeMask(string branch)
     {
-        string path = Root + branch + ".mask";
+        string path = outputRoot + branch + ".mask";
         var mask = AssetDatabase.LoadAssetAtPath<AvatarMask>(path);
         if (mask == null) { mask = new AvatarMask(); AssetDatabase.CreateAsset(mask, path); }
         mask.transformCount = Paths.Length;
@@ -48,12 +63,12 @@ public static class SharedRigBuilder
         EditorUtility.SetDirty(mask); return mask;
     }
 
-    private static AnimationClip[] MakeClips(string motion, bool upper)
+    private AnimationClip[] MakeClips(string motion, bool upper)
     {
         var result = new AnimationClip[4];
         for (int d = 0; d < 4; d++)
         {
-            string path = Root + "Clips/" + (upper ? "upper_" : "lower_") + motion + "_" + d + ".anim";
+            string path = outputRoot + "Clips/" + (upper ? "upper_" : "lower_") + motion + "_" + d + ".anim";
             var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
             if (clip == null) { clip = new AnimationClip(); AssetDatabase.CreateAsset(clip, path); }
             clip.ClearCurves(); clip.frameRate = 60;
@@ -88,7 +103,7 @@ public static class SharedRigBuilder
         keys.Add(new Keyframe(t, value));
     }
     private static void Position(Dictionary<string, List<Keyframe>> curves, string path, float t, Vector2 px)
-    { Value(curves, path, "m_LocalPosition.x", t, px.x / 32); Value(curves, path, "m_LocalPosition.y", t, px.y / 32); Value(curves, path, "m_LocalPosition.z", t, 0); }
+    { Value(curves, path, "m_LocalPosition.x", t, px.x / CommonCharacterRig.Ppu); Value(curves, path, "m_LocalPosition.y", t, px.y / CommonCharacterRig.Ppu); Value(curves, path, "m_LocalPosition.z", t, 0); }
     private static void Rotation(Dictionary<string, List<Keyframe>> curves, string path, float t, float degrees) => Value(curves, path, "localEulerAnglesRaw.z", t, degrees, true);
     private static Vector2 Map(Vector2 p, int direction)
     {

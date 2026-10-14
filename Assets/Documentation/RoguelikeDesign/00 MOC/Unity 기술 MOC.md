@@ -6,7 +6,7 @@ design_status: 검토 중
 validation_status: 미실시
 version: 'tech-0.3'
 created: 2026-10-07
-updated: 2026-10-10
+updated: 2026-10-13
 tags:
   - 로그라이크/기획
   - Unity/기술
@@ -14,6 +14,10 @@ moc: '[[00 MOC/로그라이크 기획 MOC]]'
 ---
 
 # Unity 기술 MOC
+
+## 캐릭터 재사용 패키지 — 2026-10-13
+
+[[07 Unity 기술/캐릭터 패키지 분리와 재사용]] — 0.1.0 설치 tgz와 제작 ZIP 생성, 별도 프로젝트 설치·두 Player 빌드·제작 재현 검사 완료. 기존 훈련장 회귀와 나머지 미실시 범위는 해당 문서에서 확인한다.
 
 ## 현재 기준과 읽는 순서
 

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4c1dd2ad2dcdf429efc017a5c49599, type: 3}
+  m_Name: AzureVanguard
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Characters.CommonRigAppearance
+  appearanceId: appearance.azure-vanguard.v1
+  rigId: rig.sd-cutout.v1
+  head:
+  - {fileID: -165916825, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 189682842, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -407257425, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -2018690286, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  torso:
+  - {fileID: 1227382048, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 382259187, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -709727834, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -229780488, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  upperArm:
+  - {fileID: 1807097168, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 475237448, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -79932627, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -379734522, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  forearm:
+  - {fileID: -1640065688, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 35224880, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -1383900906, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -1017863267, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  hand:
+  - {fileID: -164215470, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 1199796241, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 1273930288, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -8525997, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  leg:
+  - {fileID: -1259126478, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -1824174551, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -660406719, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 152743686, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  weapon:
+  - {fileID: -1910560520, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 2044454649, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -756758203, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 164136482, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  shadow:
+  - {fileID: -1504612979, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 2115740436, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: 23090981, guid: 3cbe288aa66c44b882388502238091a0, type: 3}
+  - {fileID: -1137141699, guid: 3cbe288aa66c44b882388502238091a0, type: 3}

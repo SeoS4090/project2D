@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "packageFiles": 139,
+  "assetGuids": 72,
+  "externalAssetReferences": [],
+  "artifacts": {
+    "com.projectar.character-rig-0.1.0.tgz": {
+      "bytes": 649091,
+      "sha256": "230559019d5fb2d935299a9367b9d3297726db5d7b4aa134692887c2c148183f"
+    },
+    "character-authoring-0.1.0.zip": {
+      "bytes": 3023669,
+      "sha256": "75626ee428cc82d148358b5308af3d7aeaaf5db7af27928a236cf0e80762a854"
+    }
+  }
+}

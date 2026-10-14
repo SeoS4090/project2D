@@ -1,0 +1,156 @@
+{
+  "counts": {
+    "ActionDesign": 7,
+    "AttackStep": 3,
+    "CardCandidate": 14,
+    "ChargeProfile": 1,
+    "ComboBalance": 5,
+    "ComboProfile": 1,
+    "Culture": 2,
+    "Divinity": 7,
+    "EffectDamage": 41,
+    "EffectDesign": 46,
+    "EffectLimit": 7,
+    "EffectProjectile": 4,
+    "EffectSlow": 2,
+    "EffectSpace": 19,
+    "EffectTiming": 40,
+    "EnumGuide": 22,
+    "MagazineBalance": 2,
+    "ManaProfile": 1,
+    "MovementProfile": 1,
+    "PendingWork": 8,
+    "StageLabel": 6,
+    "Text": 63,
+    "TrainingLoadout": 1,
+    "UpgradeCost": 28,
+    "ValueReview": 217,
+    "WeaponBalance": 7,
+    "WeaponEffect": 46,
+    "WeaponFamily": 7,
+    "WeaponStage": 35
+  },
+  "errors": [],
+  "locations": {
+    "ActionDesign": {
+      "range": "A5:H12",
+      "sheet": "전투"
+    },
+    "AttackStep": {
+      "range": "BH5:BP8",
+      "sheet": "전투"
+    },
+    "CardCandidate": {
+      "range": "M5:U19",
+      "sheet": "빌드"
+    },
+    "ChargeProfile": {
+      "range": "AK5:AV6",
+      "sheet": "전투"
+    },
+    "ComboBalance": {
+      "range": "Y5:Z10",
+      "sheet": "무기"
+    },
+    "ComboProfile": {
+      "range": "AB5:AH6",
+      "sheet": "전투"
+    },
+    "Culture": {
+      "range": "A5:C7",
+      "sheet": "공통"
+    },
+    "Divinity": {
+      "range": "A5:J12",
+      "sheet": "빌드"
+    },
+    "EffectDamage": {
+      "range": "K5:L46",
+      "sheet": "효과"
+    },
+    "EffectDesign": {
+      "range": "A5:H51",
+      "sheet": "효과"
+    },
+    "EffectLimit": {
+      "range": "AH5:AK12",
+      "sheet": "효과"
+    },
+    "EffectProjectile": {
+      "range": "AB5:AE9",
+      "sheet": "효과"
+    },
+    "EffectSlow": {
+      "range": "AN5:AO7",
+      "sheet": "효과"
+    },
+    "EffectSpace": {
+      "range": "V5:Y24",
+      "sheet": "효과"
+    },
+    "EffectTiming": {
+      "range": "O5:S45",
+      "sheet": "효과"
+    },
+    "EnumGuide": {
+      "range": "U5:W27",
+      "sheet": "공통"
+    },
+    "MagazineBalance": {
+      "range": "AC5:AE7",
+      "sheet": "무기"
+    },
+    "ManaProfile": {
+      "range": "U5:Y6",
+      "sheet": "전투"
+    },
+    "MovementProfile": {
+      "range": "K5:R6",
+      "sheet": "전투"
+    },
+    "PendingWork": {
+      "range": "H5:K13",
+      "sheet": "검증"
+    },
+    "StageLabel": {
+      "range": "P5:R11",
+      "sheet": "공통"
+    },
+    "Text": {
+      "range": "K5:M68",
+      "sheet": "공통"
+    },
+    "TrainingLoadout": {
+      "range": "AY5:BE6",
+      "sheet": "전투"
+    },
+    "UpgradeCost": {
+      "range": "AH5:AI33",
+      "sheet": "무기"
+    },
+    "ValueReview": {
+      "range": "A5:E222",
+      "sheet": "검증"
+    },
+    "WeaponBalance": {
+      "range": "S5:V12",
+      "sheet": "무기"
+    },
+    "WeaponEffect": {
+      "range": "L5:P51",
+      "sheet": "무기"
+    },
+    "WeaponFamily": {
+      "range": "F5:H12",
+      "sheet": "공통"
+    },
+    "WeaponStage": {
+      "range": "A5:I40",
+      "sheet": "무기"
+    }
+  },
+  "myth_runtime_ready": false,
+  "pending": 175,
+  "schema_version": "data-1.0",
+  "target": "test"
+}

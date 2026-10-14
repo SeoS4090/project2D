@@ -1,0 +1,17 @@
+{
+  "passed": [
+    "Generated profiles load; scene range and mana preserved",
+    "Hash mismatch; previous catalog retained",
+    "Unknown schema; previous catalog retained",
+    "Missing required numeric value; previous catalog retained",
+    "Broken FK; previous catalog retained",
+    "Duplicate key; previous catalog retained",
+    "Unsupported row state; previous catalog retained",
+    "Step gap; previous catalog retained",
+    "Invalid charge bounds; previous catalog retained",
+    "String ID cannot be coerced; previous catalog retained",
+    "Fractional ID cannot be rounded; previous catalog retained",
+    "String enum cannot be coerced; previous catalog retained"
+  ],
+  "failure": null
+}

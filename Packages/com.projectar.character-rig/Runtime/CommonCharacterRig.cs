@@ -36,6 +36,9 @@ namespace Game.Characters
         {
             if (sharedMotions == null || skin == null || !skin.IsValid || sharedMotions.rigId != skin.rigId)
                 throw new InvalidOperationException("공통 리그/외형 호환 실패");
+            sharedMotions.Validate();
+            if (spriteMaterial == null) throw new ArgumentNullException(nameof(spriteMaterial));
+            if (graph.IsValid()) graph.Destroy();
             motions = sharedMotions; appearance = skin; material = spriteMaterial;
             EnsureHierarchy(); SetAppearance(skin);
         }
@@ -79,7 +82,7 @@ namespace Game.Characters
 
         public void SetAppearance(CommonRigAppearance skin)
         {
-            if (skin == null || !skin.IsValid || skin.rigId != motions.rigId) throw new InvalidOperationException("리그 외형 호환 실패");
+            if (motions == null || skin == null || !skin.IsValid || skin.rigId != motions.rigId) throw new InvalidOperationException("리그 외형 호환 실패");
             if (head == null) EnsureHierarchy();
             appearance = skin;
             int upper = Math.Max(0, upperDirection), lower = Math.Max(0, lowerDirection);
@@ -108,6 +111,12 @@ namespace Game.Characters
         private void SamplePose(RigUpperMotion motion, int viewDirection, int clipDirection, int moveDirection,
             float upperTime, float lowerTime, bool moving, bool dash)
         {
+            if (!graph.IsValid())
+            {
+                if (motions == null || appearance == null || !appearance.IsValid || appearance.rigId != motions.rigId)
+                    throw new InvalidOperationException("Assign compatible motions and appearance before sampling.");
+                motions.Validate();
+            }
             if (head == null) EnsureHierarchy();
             if (viewDirection < 0 || viewDirection > 3 || moveDirection < 0 || moveDirection > 3) throw new ArgumentOutOfRangeException();
             SetViews(viewDirection, moveDirection);

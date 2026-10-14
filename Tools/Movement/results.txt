@@ -1,0 +1,24 @@
+PASS No press never starts dash
+PASS Idle fresh press starts immediately
+PASS Held input cannot repeat consumed press
+PASS Current dash retains reservation
+PASS End of dash consumes valid reservation
+PASS Real-time expiry rejects stale press
+PASS Zero-charge press cannot revive after recharge
+PASS Lost charge clears reservation
+PASS Latest press refreshes one reservation only
+PASS Reset clears reservation
+PASS Zero window supports immediate press
+PASS Exact expiry boundary is accepted
+12 checks passed; no Unity physics or live input exercised.
+FPS | fixed seconds | single distance | chained path | starts | legacy single
+30 | 0.020000 | 2.080000 | 4.160000 | 2 | 2.080000
+30 | 0.016667 | 2.080000 | 4.160000 | 2 | 1.950000
+30 | 0.033333 | 2.080000 | 4.160000 | 2 | 1.733333
+60 | 0.020000 | 2.080000 | 4.160000 | 2 | 2.080000
+60 | 0.016667 | 2.080000 | 4.160000 | 2 | 1.950000
+60 | 0.033333 | 2.080000 | 4.160000 | 2 | 1.733333
+120 | 0.020000 | 2.080000 | 4.160000 | 2 | 2.080000
+120 | 0.016667 | 2.080000 | 4.160000 | 2 | 1.950000
+120 | 0.033333 | 2.080000 | 4.160000 | 2 | 1.733333
+2189 motion assertions passed (includes per-interval conservation).

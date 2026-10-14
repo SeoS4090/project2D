@@ -1,0 +1,34 @@
+{
+  "unity": "6000.3.18f1",
+  "minimal": [
+    "No optional sample installed",
+    "Runtime compiled in independent assembly",
+    "No Training controller dependency",
+    "Standalone player build: Assets/Minimal.unity"
+  ],
+  "sample": [
+    "Sample prefab imported",
+    "All 32 appearance sprites assigned",
+    "5292 motion/aim samples; max grip error px=6.397442E-06",
+    "Disable/enable, appearance rebind and graph recreation",
+    "Package-cache output rejected",
+    "Output path traversal rejected",
+    "Incomplete motion definition rejected",
+    "Existing Azure sprite prefix and local IDs preserved",
+    "Motion regeneration preserves GUID",
+    "Importer re-run preserves 32 Sprite local IDs",
+    "Importer does not replace active scene",
+    "New appearance prefab generated",
+    "Standalone player build: Assets/Preview.unity"
+  ],
+  "testedPayloadMatchesFinal": 60,
+  "asepritePngMatches": true,
+  "notRun": [
+    "Existing Project2D compile/play regression: running Editor not connected to CLI",
+    "Interactive Player rendering/input",
+    "URP lighting and performance",
+    "Upgrade/remove round trip"
+  ],
+  "reinstallFromTarball": "passed (same release candidate, not a version upgrade)",
+  "preservedOriginalAssetGuids": 48
+}

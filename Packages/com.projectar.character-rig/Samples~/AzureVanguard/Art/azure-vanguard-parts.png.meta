@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 3cbe288aa66c44b882388502238091a0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: azure-vanguard_head_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1857
+        width: 132
+        height: 125
+      alignment: 9
+      pivot: {x: 0.5, y: 0.504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0542a6b51f7c1ba4386f33191f8a8dd6
+      internalID: -165916825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_head_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1856
+        width: 132
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.503937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9c6557d98a3d342aaf7c3a48ac659f
+      internalID: 189682842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_head_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1858
+        width: 132
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50406504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b04fe9bb4c25548995df6e7b00bb62
+      internalID: -407257425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_head_3
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1858
+        width: 132
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacb71f34c15aac4c9ad460f81573332
+      internalID: -2018690286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_torso_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1626
+        width: 58
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e389903dca82146b3ca07d65149b68
+      internalID: 1227382048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_torso_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1626
+        width: 58
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0be53933660d74f8083736857d3b0e
+      internalID: 382259187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_torso_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1626
+        width: 51
+        height: 76
+      alignment: 9
+      pivot: {x: 0.49019608, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e253164b5ecbad448b4acab7548f0c98
+      internalID: -709727834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_torso_3
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1626
+        width: 51
+        height: 76
+      alignment: 9
+      pivot: {x: 0.49019608, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d9a690229380e43aaa2ec4facb46ad
+      internalID: -229780488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_upperArm_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1392
+        width: 44
+        height: 31
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00097fb8841a6964896851ce021f4c4e
+      internalID: 1807097168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_upperArm_1
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1393
+        width: 44
+        height: 30
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384489aae4f4caa4c805bf50d48254d9
+      internalID: 475237448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_upperArm_2
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1392
+        width: 44
+        height: 32
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbd2ad6bcc4e0c44b3700511d618282
+      internalID: -79932627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_upperArm_3
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1392
+        width: 44
+        height: 31
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233d654dad9c9fb41af5cbf0b7239e78
+      internalID: -379734522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_forearm_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1139
+        width: 44
+        height: 25
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98126c7e89c9df840b824422d0d8f855
+      internalID: -1640065688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_forearm_1
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1139
+        width: 44
+        height: 25
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b31b7c2d421b04894f6ba99aa402e5
+      internalID: 35224880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_forearm_2
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1139
+        width: 44
+        height: 26
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ea50568b5f64247b1a5db76833faf6
+      internalID: -1383900906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_forearm_3
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1140
+        width: 44
+        height: 24
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc1cba8660c5db49a879ceeda7ec216
+      internalID: -1017863267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_hand_0
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 884
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b92d9114cf631a4cb702c9901eb1407
+      internalID: -164215470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_hand_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 884
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647808d6cd6f53f4db8d0aaca3e4c39f
+      internalID: 1199796241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_hand_2
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 884
+        width: 25
+        height: 24
+      alignment: 9
+      pivot: {x: 0.48, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9fcc89fad705c40837c8b334240bfe
+      internalID: 1273930288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_hand_3
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 884
+        width: 26
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40fc06d4b27bfe4a9fcd2d22bc559a5
+      internalID: -8525997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_leg_0
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 602
+        width: 16
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce71d1baddb3ed46b3a6ba96affbc13
+      internalID: -1259126478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_leg_1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 602
+        width: 16
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff83b084e6672304980f310b99857b50
+      internalID: -1824174551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_leg_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 602
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.8636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d2370dc07d384498a6ead7f4fa43ae
+      internalID: -660406719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_leg_3
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 602
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.8636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477c119d3ca5f8c4588df5120eee21ed
+      internalID: 152743686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_weapon_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 347
+        width: 152
+        height: 73
+      alignment: 9
+      pivot: {x: 0.2236842, y: 0.5068493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93155cfcb450adf4dac84f257cced094
+      internalID: -1910560520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_weapon_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 347
+        width: 152
+        height: 73
+      alignment: 9
+      pivot: {x: 0.2236842, y: 0.5068493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f71d84261fac4d4092209c1c23c8c31
+      internalID: 2044454649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_weapon_2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 347
+        width: 152
+        height: 73
+      alignment: 9
+      pivot: {x: 0.2236842, y: 0.5068493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108db551caf0bb04f8c7c17cf7d2db8f
+      internalID: -756758203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_weapon_3
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 348
+        width: 152
+        height: 72
+      alignment: 9
+      pivot: {x: 0.2236842, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ed2596965cded46933ec5a7cdbc391
+      internalID: 164136482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_shadow_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 114
+        width: 136
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4852941, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce43525ffe2038c4ba2830e81ae180cf
+      internalID: -1504612979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_shadow_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 114
+        width: 136
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4852941, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669e062b5a638ca498c56407a5e90b42
+      internalID: 2115740436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_shadow_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 114
+        width: 136
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4852941, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2746f7a3c8d134244b0661887d164a0a
+      internalID: 23090981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure-vanguard_shadow_3
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 114
+        width: 136
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4852941, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b83ba289edf781488b6967693975475
+      internalID: -1137141699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 193e3cf9567cb32428cd94b000d893aa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      azure-vanguard_forearm_0: -1640065688
+      azure-vanguard_forearm_1: 35224880
+      azure-vanguard_forearm_2: -1383900906
+      azure-vanguard_forearm_3: -1017863267
+      azure-vanguard_hand_0: -164215470
+      azure-vanguard_hand_1: 1199796241
+      azure-vanguard_hand_2: 1273930288
+      azure-vanguard_hand_3: -8525997
+      azure-vanguard_head_0: -165916825
+      azure-vanguard_head_1: 189682842
+      azure-vanguard_head_2: -407257425
+      azure-vanguard_head_3: -2018690286
+      azure-vanguard_leg_0: -1259126478
+      azure-vanguard_leg_1: -1824174551
+      azure-vanguard_leg_2: -660406719
+      azure-vanguard_leg_3: 152743686
+      azure-vanguard_shadow_0: -1504612979
+      azure-vanguard_shadow_1: 2115740436
+      azure-vanguard_shadow_2: 23090981
+      azure-vanguard_shadow_3: -1137141699
+      azure-vanguard_torso_0: 1227382048
+      azure-vanguard_torso_1: 382259187
+      azure-vanguard_torso_2: -709727834
+      azure-vanguard_torso_3: -229780488
+      azure-vanguard_upperArm_0: 1807097168
+      azure-vanguard_upperArm_1: 475237448
+      azure-vanguard_upperArm_2: -79932627
+      azure-vanguard_upperArm_3: -379734522
+      azure-vanguard_weapon_0: -1910560520
+      azure-vanguard_weapon_1: 2044454649
+      azure-vanguard_weapon_2: -756758203
+      azure-vanguard_weapon_3: 164136482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.projectar.character-rig": {
+      "version": "file:com.projectar.character-rig",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.2d.sprite": "1.0.0"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 1,

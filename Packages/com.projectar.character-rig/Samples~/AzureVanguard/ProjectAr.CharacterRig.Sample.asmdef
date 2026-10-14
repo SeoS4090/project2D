@@ -1,0 +1,6 @@
+{
+  "name": "ProjectAr.CharacterRig.Sample",
+  "references": [
+    "ProjectAr.CharacterRig"
+  ]
+}

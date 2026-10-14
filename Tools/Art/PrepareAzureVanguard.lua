@@ -1,7 +1,8 @@
 -- Asset preparation: isolate generated parts and register them to the existing 32-unit rig.
-local output='Assets/Art/Characters/AzureVanguard/'
+local output=(app.params.output or 'Assets/Art/Characters/AzureVanguard')..'/'
+local sources=(app.params.sources or 'CharacterAuthoring/AzureVanguard')..'/'
 app.fs.makeAllDirectories(output)
-local source=app.open('CharacterAuthoring/AzureVanguard/azure-vanguard-source-v1.png')
+local source=app.open(sources..'azure-vanguard-source-v1.png')
 local raw=source.cels[1].image
 local bands={{350,550},{550,765},{785,925},{975,1085},{1145,1270},{1285,1555},{1580,1710}}
 local names={'head','torso','upperArm','forearm','hand','leg','weapon','shadow'}
@@ -9,10 +10,10 @@ local scale=4
 local cell=64*scale
 local sheet=Image(cell*4,cell*8,ColorMode.RGB)
 local editable=Sprite(cell,cell,ColorMode.RGB)
-local shadowSource=app.open('CharacterAuthoring/AzureVanguard/shadow-source.aseprite')
+local shadowSource=app.open(sources..'shadow-source.aseprite')
 local shadowLayer
 for _,l in ipairs(shadowSource.layers) do if l.name=='shadow' then shadowLayer=l end end
-local log=io.open('CharacterAuthoring/AzureVanguard/part-registration.csv','w')
+local log=io.open(output..'part-registration.csv','w')
 log:write('part,direction,source_x,source_y,source_width,source_height,target_width,target_height,offset_x,offset_y\n')
 for row,name in ipairs(names) do
  local layer=row==1 and editable.layers[1] or editable:newLayer();layer.name=name

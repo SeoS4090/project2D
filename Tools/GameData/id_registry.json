@@ -1,0 +1,2298 @@
+{
+  "schema_version": "data-1.0",
+  "tables": {
+    "Culture": {
+      "culture_greek": 1,
+      "culture_norse": 2
+    },
+    "Divinity": {
+      "divinity_zeus": 1,
+      "divinity_thor": 2,
+      "divinity_apollo": 3,
+      "divinity_ares": 4,
+      "divinity_hades": 5,
+      "divinity_artemis": 6,
+      "divinity_skadi": 7
+    },
+    "WeaponFamily": {
+      "family_spear": 1,
+      "family_hammer": 2,
+      "family_greatsword": 3,
+      "family_dagger": 4,
+      "family_sword_shield": 5,
+      "family_bow": 6,
+      "family_staff": 7
+    },
+    "ActionDesign": {
+      "pattern_spear": 1,
+      "pattern_hammer": 2,
+      "pattern_greatsword": 3,
+      "pattern_dagger": 4,
+      "pattern_sword_shield": 5,
+      "pattern_bow": 6,
+      "pattern_staff": 7
+    },
+    "WeaponStage": {
+      "weapon_spear": 1,
+      "weapon_hammer": 2,
+      "weapon_greatsword": 3,
+      "weapon_dagger": 4,
+      "weapon_sword_shield": 5,
+      "weapon_bow": 6,
+      "weapon_staff": 7,
+      "upgrade_m2_sp_line": 8,
+      "upgrade_m2_sp_pursuit": 9,
+      "upgrade_m2_hm_return": 10,
+      "upgrade_m2_hm_impact": 11,
+      "upgrade_m2_gs_seal": 12,
+      "upgrade_m2_dg_stalk": 13,
+      "upgrade_m2_ss_counter": 14,
+      "upgrade_m2_bw_aim": 15,
+      "upgrade_m2_bw_move": 16,
+      "upgrade_m2_st_cadence": 17,
+      "upgrade_m3_zeu_sp": 18,
+      "upgrade_m3_zeu_hm": 19,
+      "upgrade_m3_zeu_ss": 20,
+      "upgrade_m3_tho_hm_r": 21,
+      "upgrade_m3_tho_hm_i": 22,
+      "upgrade_m3_apo_sp": 23,
+      "upgrade_m3_apo_bw": 24,
+      "upgrade_m3_apo_st": 25,
+      "upgrade_m3_are_sp": 26,
+      "upgrade_m3_are_gs": 27,
+      "upgrade_m3_are_ss": 28,
+      "upgrade_m3_had_gs": 29,
+      "upgrade_m3_had_dg": 30,
+      "upgrade_m3_art_sp": 31,
+      "upgrade_m3_art_dg": 32,
+      "upgrade_m3_art_bw": 33,
+      "upgrade_m3_ska_bw": 34,
+      "upgrade_m3_ska_st": 35
+    },
+    "EffectDesign": {
+      "effect_m2_sp_line_base": 1,
+      "effect_m2_sp_pursuit_base": 2,
+      "effect_m2_hm_return_base": 3,
+      "effect_m2_hm_impact_base": 4,
+      "effect_m2_gs_seal_base": 5,
+      "effect_m2_dg_stalk_base": 6,
+      "effect_m2_ss_counter_base": 7,
+      "effect_m2_bw_aim_base": 8,
+      "effect_m2_bw_move_base": 9,
+      "effect_m2_st_cadence_base": 10,
+      "effect_m3_zeu_sp_base": 11,
+      "effect_m3_zeu_sp_resonance": 12,
+      "effect_m3_zeu_hm_base": 13,
+      "effect_m3_zeu_hm_resonance": 14,
+      "effect_m3_zeu_ss_base": 15,
+      "effect_m3_zeu_ss_resonance": 16,
+      "effect_m3_tho_hm_r_base": 17,
+      "effect_m3_tho_hm_r_resonance": 18,
+      "effect_m3_tho_hm_i_base": 19,
+      "effect_m3_tho_hm_i_resonance": 20,
+      "effect_m3_apo_sp_base": 21,
+      "effect_m3_apo_sp_resonance": 22,
+      "effect_m3_apo_bw_base": 23,
+      "effect_m3_apo_bw_resonance": 24,
+      "effect_m3_apo_st_base": 25,
+      "effect_m3_apo_st_resonance": 26,
+      "effect_m3_are_sp_base": 27,
+      "effect_m3_are_sp_resonance": 28,
+      "effect_m3_are_gs_base": 29,
+      "effect_m3_are_gs_resonance": 30,
+      "effect_m3_are_ss_base": 31,
+      "effect_m3_are_ss_resonance": 32,
+      "effect_m3_had_gs_base": 33,
+      "effect_m3_had_gs_resonance": 34,
+      "effect_m3_had_dg_base": 35,
+      "effect_m3_had_dg_resonance": 36,
+      "effect_m3_art_sp_base": 37,
+      "effect_m3_art_sp_resonance": 38,
+      "effect_m3_art_dg_base": 39,
+      "effect_m3_art_dg_resonance": 40,
+      "effect_m3_art_bw_base": 41,
+      "effect_m3_art_bw_resonance": 42,
+      "effect_m3_ska_bw_base": 43,
+      "effect_m3_ska_bw_resonance": 44,
+      "effect_m3_ska_st_base": 45,
+      "effect_m3_ska_st_resonance": 46
+    },
+    "CardCandidate": {
+      "card_zeus_general": 1,
+      "card_zeus_exclusive": 2,
+      "card_thor_general": 3,
+      "card_thor_exclusive": 4,
+      "card_apollo_general": 5,
+      "card_apollo_exclusive": 6,
+      "card_ares_general": 7,
+      "card_ares_exclusive": 8,
+      "card_hades_general": 9,
+      "card_hades_exclusive": 10,
+      "card_artemis_general": 11,
+      "card_artemis_exclusive": 12,
+      "card_skadi_general": 13,
+      "card_skadi_exclusive": 14
+    },
+    "MovementProfile": {
+      "training_movementprofile": 1
+    },
+    "ManaProfile": {
+      "training_manaprofile": 1
+    },
+    "ComboProfile": {
+      "training_comboprofile": 1
+    },
+    "ChargeProfile": {
+      "training_chargeprofile": 1
+    },
+    "TrainingLoadout": {
+      "training_greatsword": 1
+    }
+  },
+  "retired": {},
+  "legacy_mapping": [
+    {
+      "old_table": "Culture",
+      "old_id": "culture_greek",
+      "table": "Culture",
+      "id": 1
+    },
+    {
+      "old_table": "Culture",
+      "old_id": "culture_norse",
+      "table": "Culture",
+      "id": 2
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_zeus",
+      "table": "Divinity",
+      "id": 1
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_thor",
+      "table": "Divinity",
+      "id": 2
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_apollo",
+      "table": "Divinity",
+      "id": 3
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_ares",
+      "table": "Divinity",
+      "id": 4
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_hades",
+      "table": "Divinity",
+      "id": 5
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_artemis",
+      "table": "Divinity",
+      "id": 6
+    },
+    {
+      "old_table": "Divinity",
+      "old_id": "divinity_skadi",
+      "table": "Divinity",
+      "id": 7
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_spear",
+      "table": "WeaponFamily",
+      "id": 1
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_hammer",
+      "table": "WeaponFamily",
+      "id": 2
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_greatsword",
+      "table": "WeaponFamily",
+      "id": 3
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_dagger",
+      "table": "WeaponFamily",
+      "id": 4
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_sword_shield",
+      "table": "WeaponFamily",
+      "id": 5
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_bow",
+      "table": "WeaponFamily",
+      "id": 6
+    },
+    {
+      "old_table": "WeaponFamily",
+      "old_id": "family_staff",
+      "table": "WeaponFamily",
+      "id": 7
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_spear",
+      "table": "ActionDesign",
+      "id": 1
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_hammer",
+      "table": "ActionDesign",
+      "id": 2
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_greatsword",
+      "table": "ActionDesign",
+      "id": 3
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_dagger",
+      "table": "ActionDesign",
+      "id": 4
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_sword_shield",
+      "table": "ActionDesign",
+      "id": 5
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_bow",
+      "table": "ActionDesign",
+      "id": 6
+    },
+    {
+      "old_table": "AttackPattern",
+      "old_id": "pattern_staff",
+      "table": "ActionDesign",
+      "id": 7
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_spear",
+      "table": "WeaponStage",
+      "id": 1
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_hammer",
+      "table": "WeaponStage",
+      "id": 2
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_greatsword",
+      "table": "WeaponStage",
+      "id": 3
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_dagger",
+      "table": "WeaponStage",
+      "id": 4
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_sword_shield",
+      "table": "WeaponStage",
+      "id": 5
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "table": "WeaponStage",
+      "id": 6
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "table": "WeaponStage",
+      "id": 7
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_sp_line",
+      "table": "WeaponStage",
+      "id": 8
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_sp_pursuit",
+      "table": "WeaponStage",
+      "id": 9
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_hm_return",
+      "table": "WeaponStage",
+      "id": 10
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_hm_impact",
+      "table": "WeaponStage",
+      "id": 11
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_gs_seal",
+      "table": "WeaponStage",
+      "id": 12
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_dg_stalk",
+      "table": "WeaponStage",
+      "id": 13
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_ss_counter",
+      "table": "WeaponStage",
+      "id": 14
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_bw_aim",
+      "table": "WeaponStage",
+      "id": 15
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_bw_move",
+      "table": "WeaponStage",
+      "id": 16
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_st_cadence",
+      "table": "WeaponStage",
+      "id": 17
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_sp",
+      "table": "WeaponStage",
+      "id": 18
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_hm",
+      "table": "WeaponStage",
+      "id": 19
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_ss",
+      "table": "WeaponStage",
+      "id": 20
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_tho_hm_r",
+      "table": "WeaponStage",
+      "id": 21
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_tho_hm_i",
+      "table": "WeaponStage",
+      "id": 22
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_sp",
+      "table": "WeaponStage",
+      "id": 23
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_bw",
+      "table": "WeaponStage",
+      "id": 24
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_st",
+      "table": "WeaponStage",
+      "id": 25
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_sp",
+      "table": "WeaponStage",
+      "id": 26
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_gs",
+      "table": "WeaponStage",
+      "id": 27
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_ss",
+      "table": "WeaponStage",
+      "id": 28
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_had_gs",
+      "table": "WeaponStage",
+      "id": 29
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_had_dg",
+      "table": "WeaponStage",
+      "id": 30
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_sp",
+      "table": "WeaponStage",
+      "id": 31
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_dg",
+      "table": "WeaponStage",
+      "id": 32
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_bw",
+      "table": "WeaponStage",
+      "id": 33
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_ska_bw",
+      "table": "WeaponStage",
+      "id": 34
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_ska_st",
+      "table": "WeaponStage",
+      "id": 35
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_line_base",
+      "table": "EffectDesign",
+      "id": 1
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_pursuit_base",
+      "table": "EffectDesign",
+      "id": 2
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_return_base",
+      "table": "EffectDesign",
+      "id": 3
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_impact_base",
+      "table": "EffectDesign",
+      "id": 4
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_gs_seal_base",
+      "table": "EffectDesign",
+      "id": 5
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_dg_stalk_base",
+      "table": "EffectDesign",
+      "id": 6
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_ss_counter_base",
+      "table": "EffectDesign",
+      "id": 7
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_aim_base",
+      "table": "EffectDesign",
+      "id": 8
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_move_base",
+      "table": "EffectDesign",
+      "id": 9
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_st_cadence_base",
+      "table": "EffectDesign",
+      "id": 10
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_base",
+      "table": "EffectDesign",
+      "id": 11
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_resonance",
+      "table": "EffectDesign",
+      "id": 12
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_base",
+      "table": "EffectDesign",
+      "id": 13
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_resonance",
+      "table": "EffectDesign",
+      "id": 14
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_base",
+      "table": "EffectDesign",
+      "id": 15
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_resonance",
+      "table": "EffectDesign",
+      "id": 16
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_base",
+      "table": "EffectDesign",
+      "id": 17
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_resonance",
+      "table": "EffectDesign",
+      "id": 18
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_base",
+      "table": "EffectDesign",
+      "id": 19
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_resonance",
+      "table": "EffectDesign",
+      "id": 20
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_base",
+      "table": "EffectDesign",
+      "id": 21
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_resonance",
+      "table": "EffectDesign",
+      "id": 22
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_base",
+      "table": "EffectDesign",
+      "id": 23
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_resonance",
+      "table": "EffectDesign",
+      "id": 24
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_base",
+      "table": "EffectDesign",
+      "id": 25
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_resonance",
+      "table": "EffectDesign",
+      "id": 26
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_base",
+      "table": "EffectDesign",
+      "id": 27
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_resonance",
+      "table": "EffectDesign",
+      "id": 28
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_base",
+      "table": "EffectDesign",
+      "id": 29
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_resonance",
+      "table": "EffectDesign",
+      "id": 30
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_base",
+      "table": "EffectDesign",
+      "id": 31
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_resonance",
+      "table": "EffectDesign",
+      "id": 32
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_base",
+      "table": "EffectDesign",
+      "id": 33
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_resonance",
+      "table": "EffectDesign",
+      "id": 34
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_base",
+      "table": "EffectDesign",
+      "id": 35
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_resonance",
+      "table": "EffectDesign",
+      "id": 36
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_base",
+      "table": "EffectDesign",
+      "id": 37
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_resonance",
+      "table": "EffectDesign",
+      "id": 38
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_base",
+      "table": "EffectDesign",
+      "id": 39
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_resonance",
+      "table": "EffectDesign",
+      "id": 40
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_base",
+      "table": "EffectDesign",
+      "id": 41
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_resonance",
+      "table": "EffectDesign",
+      "id": 42
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_base",
+      "table": "EffectDesign",
+      "id": 43
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "table": "EffectDesign",
+      "id": 44
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_base",
+      "table": "EffectDesign",
+      "id": 45
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "table": "EffectDesign",
+      "id": 46
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_zeus_general",
+      "table": "CardCandidate",
+      "id": 1
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_zeus_exclusive",
+      "table": "CardCandidate",
+      "id": 2
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_thor_general",
+      "table": "CardCandidate",
+      "id": 3
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_thor_exclusive",
+      "table": "CardCandidate",
+      "id": 4
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_apollo_general",
+      "table": "CardCandidate",
+      "id": 5
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_apollo_exclusive",
+      "table": "CardCandidate",
+      "id": 6
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_ares_general",
+      "table": "CardCandidate",
+      "id": 7
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_ares_exclusive",
+      "table": "CardCandidate",
+      "id": 8
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_hades_general",
+      "table": "CardCandidate",
+      "id": 9
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_hades_exclusive",
+      "table": "CardCandidate",
+      "id": 10
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_artemis_general",
+      "table": "CardCandidate",
+      "id": 11
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_artemis_exclusive",
+      "table": "CardCandidate",
+      "id": 12
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_skadi_general",
+      "table": "CardCandidate",
+      "id": 13
+    },
+    {
+      "old_table": "CardCandidate",
+      "old_id": "card_skadi_exclusive",
+      "table": "CardCandidate",
+      "id": 14
+    }
+  ],
+  "numeric_mapping": [
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_line_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 1,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_pursuit_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 2,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_impact_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 4,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_gs_seal_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 5,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_dg_stalk_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 6,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_ss_counter_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 7,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_aim_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 8,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_move_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 9,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_st_cadence_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 10,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 11,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 12,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 13,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 14,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 15,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 16,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 18,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 19,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 20,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 21,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 22,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 23,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 24,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 25,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 26,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 27,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 28,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 29,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 31,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 32,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 33,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 34,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 35,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 37,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 38,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 39,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 40,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 41,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 42,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 43,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 44,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_base",
+      "parameter": "damage_coefficient_ratio",
+      "table": "EffectDamage",
+      "id": 45,
+      "field": "damage_coefficient_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_line_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 1,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_sp_pursuit_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 2,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_impact_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 4,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_gs_seal_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 5,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_dg_stalk_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 6,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_ss_counter_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 7,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_aim_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 8,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_st_cadence_base",
+      "parameter": "timing_window_sec",
+      "table": "EffectTiming",
+      "id": 10,
+      "field": "timing_window_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 11,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_resonance",
+      "parameter": "delay_sec",
+      "table": "EffectTiming",
+      "id": 12,
+      "field": "delay_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 13,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_hm_resonance",
+      "parameter": "delay_sec",
+      "table": "EffectTiming",
+      "id": 14,
+      "field": "delay_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 15,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_ss_resonance",
+      "parameter": "delay_sec",
+      "table": "EffectTiming",
+      "id": 16,
+      "field": "delay_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 18,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 19,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 21,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 22,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 23,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_base",
+      "parameter": "timing_window_sec",
+      "table": "EffectTiming",
+      "id": 25,
+      "field": "timing_window_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_resonance",
+      "parameter": "timing_window_sec",
+      "table": "EffectTiming",
+      "id": 26,
+      "field": "timing_window_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 27,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 28,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 29,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 30,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_resonance",
+      "parameter": "cooldown_sec",
+      "table": "EffectTiming",
+      "id": 30,
+      "field": "cooldown_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 31,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 32,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 33,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 34,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 35,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 36,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_resonance",
+      "parameter": "cooldown_sec",
+      "table": "EffectTiming",
+      "id": 36,
+      "field": "cooldown_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 37,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 38,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 39,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 40,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_base",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 41,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_resonance",
+      "parameter": "cooldown_sec",
+      "table": "EffectTiming",
+      "id": 42,
+      "field": "cooldown_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 44,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_base",
+      "parameter": "timing_window_sec",
+      "table": "EffectTiming",
+      "id": 45,
+      "field": "timing_window_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "duration_sec",
+      "table": "EffectTiming",
+      "id": 46,
+      "field": "duration_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "cooldown_sec",
+      "table": "EffectTiming",
+      "id": 46,
+      "field": "cooldown_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_return_base",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 3,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_dg_stalk_base",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 6,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_bw_move_base",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 9,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_base",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 17,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 18,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_i_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 20,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_sp_resonance",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 22,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_st_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 26,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_gs_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 30,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 34,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_base",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 35,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_dg_resonance",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 36,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_resonance",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 38,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_base",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 39,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_dg_resonance",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 40,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_resonance",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 42,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_base",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 43,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "parameter": "radius_units",
+      "table": "EffectSpace",
+      "id": 44,
+      "field": "radius_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "range_units",
+      "table": "EffectSpace",
+      "id": 46,
+      "field": "range_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "move_distance_units",
+      "table": "EffectSpace",
+      "id": 46,
+      "field": "move_distance_units"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_return_base",
+      "parameter": "projectile_speed_units_per_sec",
+      "table": "EffectProjectile",
+      "id": 3,
+      "field": "projectile_speed_units_per_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_return_base",
+      "parameter": "return_timeout_sec",
+      "table": "EffectProjectile",
+      "id": 3,
+      "field": "return_timeout_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m2_hm_return_base",
+      "parameter": "max_hits_per_leg_count",
+      "table": "EffectProjectile",
+      "id": 3,
+      "field": "max_hits_per_leg_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_base",
+      "parameter": "projectile_speed_units_per_sec",
+      "table": "EffectProjectile",
+      "id": 17,
+      "field": "projectile_speed_units_per_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_base",
+      "parameter": "return_timeout_sec",
+      "table": "EffectProjectile",
+      "id": 17,
+      "field": "return_timeout_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_tho_hm_r_base",
+      "parameter": "max_hits_per_leg_count",
+      "table": "EffectProjectile",
+      "id": 17,
+      "field": "max_hits_per_leg_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_sp_resonance",
+      "parameter": "projectile_speed_units_per_sec",
+      "table": "EffectProjectile",
+      "id": 38,
+      "field": "projectile_speed_units_per_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_art_bw_resonance",
+      "parameter": "projectile_speed_units_per_sec",
+      "table": "EffectProjectile",
+      "id": 42,
+      "field": "projectile_speed_units_per_sec"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_zeu_sp_resonance",
+      "parameter": "max_target_count",
+      "table": "EffectLimit",
+      "id": 12,
+      "field": "max_target_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_apo_bw_resonance",
+      "parameter": "max_target_count",
+      "table": "EffectLimit",
+      "id": 24,
+      "field": "max_target_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_sp_resonance",
+      "parameter": "max_stack_count",
+      "table": "EffectLimit",
+      "id": 28,
+      "field": "max_stack_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_are_ss_resonance",
+      "parameter": "max_stack_count",
+      "table": "EffectLimit",
+      "id": 32,
+      "field": "max_stack_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_had_gs_resonance",
+      "parameter": "max_area_count",
+      "table": "EffectLimit",
+      "id": 34,
+      "field": "max_area_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "parameter": "max_area_count",
+      "table": "EffectLimit",
+      "id": 44,
+      "field": "max_area_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "max_area_count",
+      "table": "EffectLimit",
+      "id": 46,
+      "field": "max_area_count"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_bw_resonance",
+      "parameter": "slow_ratio",
+      "table": "EffectSlow",
+      "id": 44,
+      "field": "slow_ratio"
+    },
+    {
+      "old_table": "Effect",
+      "old_id": "effect_m3_ska_st_resonance",
+      "parameter": "slow_ratio",
+      "table": "EffectSlow",
+      "id": 46,
+      "field": "slow_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_spear",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 1,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_spear",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 1,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_spear",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 1,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_hammer",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 2,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_hammer",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 2,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_hammer",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 2,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_greatsword",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 3,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_greatsword",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 3,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_greatsword",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 3,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_dagger",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 4,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_dagger",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 4,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_dagger",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 4,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_sword_shield",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 5,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_sword_shield",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 5,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_sword_shield",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 5,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 6,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 6,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 6,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "parameter": "base_attack",
+      "table": "WeaponBalance",
+      "id": 7,
+      "field": "base_attack"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "parameter": "attack_move_speed_ratio",
+      "table": "WeaponBalance",
+      "id": 7,
+      "field": "attack_move_speed_ratio"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "parameter": "mana_cost",
+      "table": "WeaponBalance",
+      "id": 7,
+      "field": "mana_cost"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_spear",
+      "parameter": "combo_end_gap_sec",
+      "table": "ComboBalance",
+      "id": 1,
+      "field": "combo_end_gap_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_hammer",
+      "parameter": "combo_end_gap_sec",
+      "table": "ComboBalance",
+      "id": 2,
+      "field": "combo_end_gap_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_greatsword",
+      "parameter": "combo_end_gap_sec",
+      "table": "ComboBalance",
+      "id": 3,
+      "field": "combo_end_gap_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_dagger",
+      "parameter": "combo_end_gap_sec",
+      "table": "ComboBalance",
+      "id": 4,
+      "field": "combo_end_gap_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_sword_shield",
+      "parameter": "combo_end_gap_sec",
+      "table": "ComboBalance",
+      "id": 5,
+      "field": "combo_end_gap_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "parameter": "magazine_capacity",
+      "table": "MagazineBalance",
+      "id": 6,
+      "field": "magazine_capacity"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_bow",
+      "parameter": "reload_sec",
+      "table": "MagazineBalance",
+      "id": 6,
+      "field": "reload_sec"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "parameter": "magazine_capacity",
+      "table": "MagazineBalance",
+      "id": 7,
+      "field": "magazine_capacity"
+    },
+    {
+      "old_table": "Weapon",
+      "old_id": "weapon_staff",
+      "parameter": "reload_sec",
+      "table": "MagazineBalance",
+      "id": 7,
+      "field": "reload_sec"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_sp_line",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 8,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_sp_pursuit",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 9,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_hm_return",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 10,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_hm_impact",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 11,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_gs_seal",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 12,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_dg_stalk",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 13,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_ss_counter",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 14,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_bw_aim",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 15,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_bw_move",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 16,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m2_st_cadence",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 17,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_sp",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 18,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_hm",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 19,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_zeu_ss",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 20,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_tho_hm_r",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 21,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_tho_hm_i",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 22,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_sp",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 23,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_bw",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 24,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_apo_st",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 25,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_sp",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 26,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_gs",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 27,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_are_ss",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 28,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_had_gs",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 29,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_had_dg",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 30,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_sp",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 31,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_dg",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 32,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_art_bw",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 33,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_ska_bw",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 34,
+      "field": "cost_amount"
+    },
+    {
+      "old_table": "Upgrade",
+      "old_id": "upgrade_m3_ska_st",
+      "parameter": "cost_amount",
+      "table": "UpgradeCost",
+      "id": 35,
+      "field": "cost_amount"
+    }
+  ],
+  "legacy_sha256": "bb81d309f74d5be4ae33a349f95b3506bb4dc616a200aa7a00e7e0bea4a3b6cd"
+}

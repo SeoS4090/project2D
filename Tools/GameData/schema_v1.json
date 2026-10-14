@@ -1,0 +1,1244 @@
+{
+  "schema_version": "data-1.0",
+  "generator_version": 1,
+  "sheets": [
+    "무기",
+    "전투",
+    "효과",
+    "빌드",
+    "공통",
+    "검증"
+  ],
+  "enums": {
+    "RowState": {
+      "Draft": 1,
+      "Test": 2,
+      "Release": 3,
+      "Retired": 4
+    },
+    "ValueStatus": {
+      "Pending": 1,
+      "Provisional": 2,
+      "Fixed": 3
+    },
+    "ImplementationStatus": {
+      "Pending": 1,
+      "Implemented": 2
+    },
+    "EffectLayer": {
+      "Base": 1,
+      "Resonance": 2
+    },
+    "AttackMode": {
+      "Combo": 1,
+      "Magazine": 2
+    },
+    "SpecialAction": {
+      "ChargeAttack": 1,
+      "Parry": 2,
+      "Guard": 3,
+      "Reload": 4
+    },
+    "ApplyPolicy": {
+      "ReplaceParentBase": 1
+    },
+    "CardCategory": {
+      "General": 1,
+      "Divine": 2
+    },
+    "AccessPolicy": {
+      "None": 1,
+      "OwnDivinity": 2
+    }
+  },
+  "tables": {
+    "Culture": {
+      "sheet": "공통",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name_ko",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "WeaponFamily": {
+      "sheet": "공통",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name_key",
+          "type": "string",
+          "required": true,
+          "ref": "Text.name_key"
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "Divinity": {
+      "sheet": "빌드",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name_key",
+          "type": "string",
+          "required": true,
+          "ref": "Text.name_key"
+        },
+        {
+          "name": "culture_id",
+          "type": "id",
+          "required": true,
+          "ref": "Culture"
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "myth_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "adaptation",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_url",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "condition_status",
+          "type": "ImplementationStatus",
+          "required": true
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "CardCandidate": {
+      "sheet": "빌드",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name_key",
+          "type": "string",
+          "required": true,
+          "ref": "Text.name_key"
+        },
+        {
+          "name": "category",
+          "type": "CardCategory",
+          "required": true
+        },
+        {
+          "name": "theme_divinity_id",
+          "type": "id",
+          "required": true,
+          "ref": "Divinity"
+        },
+        {
+          "name": "access_policy",
+          "type": "AccessPolicy",
+          "required": true
+        },
+        {
+          "name": "design_effect",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "effect_status",
+          "type": "ImplementationStatus",
+          "required": true
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "ActionDesign": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "family_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponFamily"
+        },
+        {
+          "name": "attack_mode",
+          "type": "AttackMode",
+          "required": true
+        },
+        {
+          "name": "special_action",
+          "type": "SpecialAction",
+          "required": true
+        },
+        {
+          "name": "action_description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "implementation_status",
+          "type": "ImplementationStatus",
+          "required": true
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "WeaponStage": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name_key",
+          "type": "string",
+          "required": true,
+          "ref": "Text.name_key"
+        },
+        {
+          "name": "parent_id",
+          "type": "id",
+          "required": false,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "family_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponFamily"
+        },
+        {
+          "name": "action_design_id",
+          "type": "id",
+          "required": true,
+          "ref": "ActionDesign"
+        },
+        {
+          "name": "design_key",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "apply_policy",
+          "type": "ApplyPolicy",
+          "required": true
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "EffectDesign": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "layer",
+          "type": "EffectLayer",
+          "required": true
+        },
+        {
+          "name": "profile_key",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "failure_policy",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "implementation_status",
+          "type": "ImplementationStatus",
+          "required": true
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": false
+    },
+    "WeaponEffect": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "stage_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "order_index",
+          "type": "int",
+          "required": true,
+          "min": 1
+        },
+        {
+          "name": "effect_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "divinity_id",
+          "type": "id",
+          "required": false,
+          "ref": "Divinity"
+        },
+        {
+          "name": "min_divinity_stage",
+          "type": "int",
+          "required": false,
+          "min": 1
+        }
+      ],
+      "key": [
+        "stage_id",
+        "order_index"
+      ],
+      "runtime": false
+    },
+    "EffectDamage": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "damage_coefficient_ratio",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "ratio",
+          "meaning": "기본 공격력에 곱하는 배율. 1은 100%. 추가 효과용",
+          "allow_zero": true
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "EffectTiming": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "duration_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "효과 또는 준비 상태의 유지 시간",
+          "allow_zero": true
+        },
+        {
+          "name": "cooldown_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "동일 효과의 재발동 제한",
+          "allow_zero": true
+        },
+        {
+          "name": "delay_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "집행부터 판정까지 지연",
+          "allow_zero": true
+        },
+        {
+          "name": "timing_window_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "리듬 성공 판정 구간 길이",
+          "allow_zero": false
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "EffectSpace": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "radius_units",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "world_unit",
+          "meaning": "효과 반경. 월드 단위 환산은 후속",
+          "allow_zero": false
+        },
+        {
+          "name": "range_units",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "world_unit",
+          "meaning": "유효 사거리 또는 투척 최대 거리",
+          "allow_zero": false
+        },
+        {
+          "name": "move_distance_units",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "world_unit",
+          "meaning": "자발적 실제 이동의 요구 거리",
+          "allow_zero": false
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "EffectProjectile": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "projectile_speed_units_per_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "world_unit_per_sec",
+          "meaning": "비행 속도",
+          "allow_zero": false
+        },
+        {
+          "name": "return_timeout_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "투척 회수 지연의 무피해 복귀 상한",
+          "allow_zero": false
+        },
+        {
+          "name": "max_hits_per_leg_count",
+          "type": "int",
+          "required": false,
+          "min": 1,
+          "unit": "count",
+          "meaning": "투척 전진 또는 귀환 한 구간의 대상별 적중 상한",
+          "allow_zero": false
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "EffectLimit": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "max_stack_count",
+          "type": "int",
+          "required": false,
+          "min": 1,
+          "unit": "count",
+          "meaning": "소유자별 저장 스택 상한",
+          "allow_zero": false
+        },
+        {
+          "name": "max_target_count",
+          "type": "int",
+          "required": false,
+          "min": 1,
+          "unit": "count",
+          "meaning": "실행 하나의 효과 대상 상한",
+          "allow_zero": false
+        },
+        {
+          "name": "max_area_count",
+          "type": "int",
+          "required": false,
+          "min": 1,
+          "unit": "count",
+          "meaning": "소유자별 동시 영역 상한",
+          "allow_zero": false
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "EffectSlow": {
+      "sheet": "효과",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "EffectDesign"
+        },
+        {
+          "name": "slow_ratio",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "max": 1,
+          "unit": "ratio",
+          "meaning": "이동 속도 감소 비율. 0.2는 20% 감소",
+          "allow_zero": true
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "WeaponBalance": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "base_attack",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "attack_point",
+          "meaning": "무기 기본 공격력",
+          "allow_zero": true
+        },
+        {
+          "name": "mana_cost",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "mana_point",
+          "meaning": "특수행동 집행 비용",
+          "allow_zero": true
+        },
+        {
+          "name": "attack_move_speed_ratio",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "ratio",
+          "meaning": "기본 이동 속도에 곱하는 공격 중 배율",
+          "allow_zero": true
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "ComboBalance": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "combo_end_gap_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "연격 완주 공백과 중단 대기",
+          "allow_zero": true
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "MagazineBalance": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "magazine_capacity",
+          "type": "int",
+          "required": false,
+          "min": 1,
+          "unit": "count",
+          "meaning": "장탄 수",
+          "allow_zero": false
+        },
+        {
+          "name": "reload_sec",
+          "type": "float",
+          "required": false,
+          "min": 0,
+          "unit": "sec",
+          "meaning": "재장전 완료까지 시간",
+          "allow_zero": false
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "UpgradeCost": {
+      "sheet": "무기",
+      "fields": [
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true,
+          "ref": "WeaponStage"
+        },
+        {
+          "name": "cost_amount",
+          "type": "int",
+          "required": false,
+          "min": 0,
+          "unit": "currency_unit",
+          "meaning": "강화 비용. 통화 단위 연결 확정 전 사용 금지",
+          "allow_zero": true
+        }
+      ],
+      "key": [
+        "owner_id"
+      ],
+      "runtime": false
+    },
+    "ValueReview": {
+      "sheet": "검증",
+      "fields": [
+        {
+          "name": "table_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "owner_id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "field_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "value_status",
+          "type": "ValueStatus",
+          "required": true
+        },
+        {
+          "name": "value_basis",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "key": [
+        "table_name",
+        "owner_id",
+        "field_name"
+      ],
+      "runtime": false
+    },
+    "Text": {
+      "sheet": "공통",
+      "fields": [
+        {
+          "name": "name_key",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "locale",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "key": [
+        "name_key",
+        "locale"
+      ],
+      "runtime": false
+    },
+    "PendingWork": {
+      "sheet": "검증",
+      "fields": [
+        {
+          "name": "work_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "table_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "remaining",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "completion",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "key": [
+        "work_id"
+      ],
+      "runtime": false
+    },
+    "StageLabel": {
+      "sheet": "공통",
+      "fields": [
+        {
+          "name": "stage_domain",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "stage_index",
+          "type": "int",
+          "required": true,
+          "min": 1
+        },
+        {
+          "name": "name_ko",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "key": [
+        "stage_domain",
+        "stage_index"
+      ],
+      "runtime": false
+    },
+    "MovementProfile": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "move_speed",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "dash_speed",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "dash_duration_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "dash_recharge_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "max_dash_charges",
+          "type": "int",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        },
+        {
+          "name": "dash_buffer_sec",
+          "type": "float",
+          "required": true,
+          "min": 0
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": true
+    },
+    "ManaProfile": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "max_mana",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "regen_per_sec",
+          "type": "float",
+          "required": true,
+          "min": 0
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": true
+    },
+    "ComboProfile": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cooldown_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "link_window_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "end_gap_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "break_gap_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": true
+    },
+    "ChargeProfile": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "max_charge_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "move_ratio",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "windup_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "active_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "recovery_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "damage_min",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "damage_max",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "range_units",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "mana_cost",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": true
+    },
+    "TrainingLoadout": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "id",
+          "type": "id",
+          "required": true
+        },
+        {
+          "name": "code_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "movement_id",
+          "type": "id",
+          "required": true,
+          "ref": "MovementProfile"
+        },
+        {
+          "name": "mana_id",
+          "type": "id",
+          "required": true,
+          "ref": "ManaProfile"
+        },
+        {
+          "name": "combo_id",
+          "type": "id",
+          "required": true,
+          "ref": "ComboProfile"
+        },
+        {
+          "name": "charge_id",
+          "type": "id",
+          "required": true,
+          "ref": "ChargeProfile"
+        },
+        {
+          "name": "row_state",
+          "type": "RowState",
+          "required": true
+        }
+      ],
+      "key": [
+        "id"
+      ],
+      "runtime": true
+    },
+    "AttackStep": {
+      "sheet": "전투",
+      "fields": [
+        {
+          "name": "combo_id",
+          "type": "id",
+          "required": true,
+          "ref": "ComboProfile"
+        },
+        {
+          "name": "step_index",
+          "type": "int",
+          "required": true,
+          "min": 1
+        },
+        {
+          "name": "clip",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "windup_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "active_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "recovery_sec",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "damage",
+          "type": "float",
+          "required": true,
+          "min": 0
+        },
+        {
+          "name": "range_units",
+          "type": "float",
+          "required": true,
+          "min": 1e-06
+        },
+        {
+          "name": "half_angle_deg",
+          "type": "float",
+          "required": true,
+          "min": 0,
+          "max": 180
+        }
+      ],
+      "key": [
+        "combo_id",
+        "step_index"
+      ],
+      "runtime": true
+    },
+    "EnumGuide": {
+      "sheet": "공통",
+      "fields": [
+        {
+          "name": "enum_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "number",
+          "type": "int",
+          "required": true,
+          "min": 1
+        }
+      ],
+      "key": [
+        "enum_name",
+        "member_name"
+      ],
+      "runtime": false
+    }
+  }
+}

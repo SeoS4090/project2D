@@ -1,0 +1,10 @@
+{
+  "name": "ProjectAr.CharacterRig.Editor",
+  "references": [
+    "ProjectAr.CharacterRig",
+    "Unity.2D.Sprite.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

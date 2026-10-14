@@ -1,0 +1,11 @@
+{
+  "name": "ProjectAr.CharacterRig.Sample.Editor",
+  "references": [
+    "ProjectAr.CharacterRig",
+    "ProjectAr.CharacterRig.Sample",
+    "ProjectAr.CharacterRig.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "data_revision": "9a232406ae5ea7d3fd7cf21459d46711c525624698d7389074f3f34086994b38",
+  "generator_version": 1,
+  "outputs": {
+    "GameData.Generated.cs": "2be72a739a3de724adcaf9c794f6beffcf39dd675277046c5c23638ae45353b7",
+    "TrainingData.json": "9a232406ae5ea7d3fd7cf21459d46711c525624698d7389074f3f34086994b38"
+  },
+  "registry_sha256": "5494e733f49c9123a7c3793e899fca8319996bf4daae439ae01247dadc15a6e4",
+  "root_id": 1,
+  "schema_sha256": "b664ac217922d3ca37613dd6113a2773745d1462b6e8c89c6f110da3fdb49d1c",
+  "schema_version": "data-1.0",
+  "source_sha256": "2821cf03f4af13f08eb090d115bdf1f82121b92994538bdfdf1960c8e2fcaa8f",
+  "target": "test"
+}
